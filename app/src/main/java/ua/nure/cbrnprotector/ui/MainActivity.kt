@@ -1,4 +1,4 @@
-package ua.nure.cbrnprotector
+package ua.nure.cbrnprotector.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
