@@ -1,6 +1,8 @@
 package ua.nure.cbrnprotector
 
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 
-class App: Application() {
+@HiltAndroidApp
+class App : Application() {
 }

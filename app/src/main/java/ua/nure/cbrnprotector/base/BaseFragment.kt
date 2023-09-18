@@ -1,4 +1,4 @@
-package ua.nure.cbrnprotector.ui
+package ua.nure.cbrnprotector.base
 
 import android.os.Bundle
 import android.view.*

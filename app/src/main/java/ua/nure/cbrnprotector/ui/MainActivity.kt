@@ -2,30 +2,25 @@ package ua.nure.cbrnprotector.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import dagger.hilt.android.AndroidEntryPoint
 import ua.nure.cbrnprotector.databinding.ActivityMainBinding
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private val binding: ActivityMainBinding by lazy {
+        ActivityMainBinding.inflate(layoutInflater)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        // Example of a call to a native method
         binding.sampleText.text = stringFromJNI()
     }
 
-    /**
-     * A native method that is implemented by the 'cbrnprotector' native library,
-     * which is packaged with this application.
-     */
     private external fun stringFromJNI(): String
 
     companion object {
-        // Used to load the 'cbrnprotector' library on application startup.
         init {
             System.loadLibrary("cbrnprotector")
         }
