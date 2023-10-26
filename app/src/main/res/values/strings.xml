@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">CBRN Protector</string>
+    <string name="navigation_home">Home</string>
+    <string name="navigation_rif">RIF</string>
+    <string name="navigation_hostiles_indicator">Hostiles Indicator</string>
+    <string name="navigation_header_title">Menu</string>
 </resources>
