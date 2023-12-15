@@ -1,6 +1,6 @@
 package ua.nure.cbrnprotector.ui.hostilesIndicator
 
-import androidx.lifecycle.ViewModel
+import ua.nure.cbrnprotector.base.BaseViewModel
 
-class RiskAchievingGoalHostilesIndicatorViewModel: ViewModel() {
+class RiskAchievingGoalHostilesIndicatorViewModel : BaseViewModel() {
 }

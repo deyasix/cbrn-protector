@@ -1,6 +1,7 @@
 package ua.nure.cbrnprotector.ui.rif
 
-import androidx.lifecycle.ViewModel
+import ua.nure.cbrnprotector.base.BaseViewModel
 
-class RIFDamageLevelViewModel: ViewModel() {
+class RIFDamageLevelViewModel : BaseViewModel() {
+
 }

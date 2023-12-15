@@ -15,7 +15,7 @@
         android:id="@+id/nav_rif"
         android:name="ua.nure.cbrnprotector.ui.rif.RIFDamageLevelFragment"
         android:label="Rну"
-        tools:layout="@layout/fragment_rif_damage_level" />
+        tools:layout="@layout/fragment_2_popups" />
 
     <fragment
         android:id="@+id/nav_hostiles_indicator"

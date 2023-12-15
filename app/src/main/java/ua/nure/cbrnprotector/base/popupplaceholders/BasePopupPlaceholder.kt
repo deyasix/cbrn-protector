@@ -11,6 +11,8 @@ import android.widget.PopupWindow
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import ua.nure.cbrnprotector.R
+import ua.nure.cbrnprotector.domain.Valuable
+import ua.nure.cbrnprotector.domain.getCondition
 
 open class BasePopupPlaceholder(context: Context, attributes: AttributeSet? = null) :
     LinearLayout(context, attributes) {
@@ -25,7 +27,7 @@ open class BasePopupPlaceholder(context: Context, attributes: AttributeSet? = nu
         createPopup()
     }
 
-    private var value: BaseConditions? = null
+    private var value: Valuable? = null
 
     init {
         inflate(context, R.layout.placeholder, this)
@@ -74,7 +76,7 @@ open class BasePopupPlaceholder(context: Context, attributes: AttributeSet? = nu
         return popupWindow
     }
 
-    fun setConditionsList(list: List<BaseConditions>) {
+    fun setConditionsList(list: List<Valuable>) {
         adapter.submitList(list)
     }
 
@@ -83,10 +85,10 @@ open class BasePopupPlaceholder(context: Context, attributes: AttributeSet? = nu
         placeholder.text = null
     }
 
-    fun getValue(): BaseConditions? = value
+    fun getValue(): Valuable? = value
 
-    private fun onItemClickListener(condition: BaseConditions) {
-        placeholder.text = condition.name
+    private fun onItemClickListener(condition: Valuable) {
+        placeholder.text = context.resources.getString(condition.nameResource)
         value = condition
         popupWindow.dismiss()
         placeholder.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_expand, 0)
@@ -95,7 +97,7 @@ open class BasePopupPlaceholder(context: Context, attributes: AttributeSet? = nu
     override fun onSaveInstanceState(): Parcelable {
         val superState = super.onSaveInstanceState()
         val savedState = SavedState(superState)
-        savedState.name = value?.name
+        savedState.name = value?.nameResource?.let { context.resources.getString(it) }
         return savedState
     }
 

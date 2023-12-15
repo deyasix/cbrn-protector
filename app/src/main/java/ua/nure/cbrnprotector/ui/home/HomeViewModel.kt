@@ -1,6 +1,6 @@
 package ua.nure.cbrnprotector.ui.home
 
-import androidx.lifecycle.ViewModel
+import ua.nure.cbrnprotector.base.BaseViewModel
 
-class HomeViewModel: ViewModel() {
+class HomeViewModel : BaseViewModel() {
 }
