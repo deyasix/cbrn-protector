@@ -78,6 +78,11 @@ open class BasePopupPlaceholder(context: Context, attributes: AttributeSet? = nu
         adapter.submitList(list)
     }
 
+    fun clearData() {
+        value = null
+        placeholder.text = null
+    }
+
     fun getValue(): BaseConditions? = value
 
     private fun onItemClickListener(condition: BaseConditions) {
