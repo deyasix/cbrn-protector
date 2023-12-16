@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="damages">
+        <item>@string/minor_damage</item>
+        <item>@string/borderline_damage</item>
+        <item>@string/critical_damage</item>
+        <item>@string/catastrophic_damage</item>
+    </string-array>
+    <string-array name="probabilities">
+        <item>@string/unlikely_probability</item>
+        <item>@string/rare_probability</item>
+        <item>@string/sometimes_probability</item>
+        <item>@string/probable_probability</item>
+        <item>@string/frequent_probability</item>
+    </string-array>
+</resources>
