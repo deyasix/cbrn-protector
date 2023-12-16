@@ -1,31 +1,3 @@
 <resources>
     <string name="app_name">CBRN Protector</string>
-    <string name="navigation_home">Home</string>
-    <string name="navigation_rif">RIF</string>
-    <string name="navigation_hostiles_indicator">Hostiles Indicator</string>
-    <string name="navigation_header_title">Menu</string>
-    <string name="calculate">Розрахувати</string>
-    <string name="clear_data">Скинути дані</string>
-
-    <string name="very_high_level">Надзвичайно високий</string>
-    <string name="high_level">Високий</string>
-    <string name="medium_level">Помірний</string>
-    <string name="low_level">Низький</string>
-
-    <string name="select_damage_degree">Оберіть ступінь ураження</string>
-    <string name="minor_damage">Незначне ураження</string>
-    <string name="borderline_damage">Граничне ураження</string>
-    <string name="critical_damage">Критичне ураження</string>
-    <string name="catastrophic_damage">Катастрофічне ураження</string>
-
-    <string name="choose_probability">Оберіть імовірність</string>
-    <string name="unlikely_probability">Малоймовірне влучання</string>
-    <string name="rare_probability">Рідке влучання</string>
-    <string name="sometimes_probability">Іноді влучає</string>
-    <string name="probable_probability">Імовірне влучання</string>
-    <string name="frequent_probability">Часте влучання</string>
-
-    <string name="rif_title">Показник ймовірного ризику недостатнього рівня ураження РПВ об\'єктів противника</string>
-    <string name="rif_probability">Імовірність влучення ТББ у об\'єкти противника</string>
-    <string name="rif_damage_level">Ступінь ураження об\'єктів противника РПВ</string>
 </resources>
