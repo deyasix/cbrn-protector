@@ -28,6 +28,7 @@ open class BasePopupPlaceholder(context: Context, attributes: AttributeSet? = nu
     }
 
     private var value: Valuable? = null
+    var onItemSelected: (Valuable) -> Unit = {}
 
     init {
         inflate(context, R.layout.placeholder, this)
@@ -91,6 +92,7 @@ open class BasePopupPlaceholder(context: Context, attributes: AttributeSet? = nu
         placeholder.text = context.resources.getString(condition.nameResource)
         value = condition
         popupWindow.dismiss()
+        onItemSelected(condition)
         placeholder.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_expand, 0)
     }
 

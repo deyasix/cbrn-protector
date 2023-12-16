@@ -14,10 +14,29 @@ class RIFDamageLevelFragment :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setListeners()
         setShowingResultLogic(binding.btnCalculate, binding.tvResult)
-        binding.btnClearData.setOnClickListener {
-            binding.ppRifDamageLevel.clearData()
-            binding.ppRifProbability.clearData()
+    }
+
+    private fun setListeners() {
+        with(binding) {
+            ppRifProbability.onItemSelected = {
+                viewModel.setPy(it.value)
+            }
+            ppRifDamageLevel.onItemSelected = {
+                viewModel.setVy(it.value)
+            }
+            btnClearData.setOnClickListener {
+                animateChangeColorAfterClear(btnCalculate)
+                tvResult.visibility = View.GONE
+                viewModel.clear()
+            }
+            viewModel.PyState.observe(viewLifecycleOwner) {
+                if (it == null) ppRifProbability.clearData()
+            }
+            viewModel.VyState.observe(viewLifecycleOwner) {
+                if (it == null) ppRifDamageLevel.clearData()
+            }
         }
     }
 }

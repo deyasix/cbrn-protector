@@ -78,6 +78,14 @@ enum class Risk : ColoredValuable {
         override val value = 1f
         override val nameResource = R.string.very_high_level
         override val color = R.color.result_very_high
+    };
+
+    companion object {
+        fun findByValue(value: Float): Risk? {
+            return Risk.values().find {
+                it.value >= value
+            }
+        }
     }
 }
 

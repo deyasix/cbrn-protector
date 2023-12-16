@@ -6,6 +6,7 @@ import android.content.res.ColorStateList
 import android.os.Bundle
 import android.view.*
 import android.view.animation.AnimationUtils
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
@@ -28,19 +29,11 @@ abstract class BaseFragment<VBinding : ViewBinding, VM : BaseViewModel>(
         return binding.root
     }
 
-    fun setShowingResultLogic(clickableView: View?, resultView: View?) {
+    fun setShowingResultLogic(clickableView: View?, resultView: TextView?) {
         clickableView?.setOnClickListener {
-            //val result = viewModel.getResult()
             val colorFrom = ContextCompat.getColor(requireContext(), R.color.light_blue)
             val colorTo = ContextCompat.getColor(requireContext(), R.color.btn_grey)
-            ValueAnimator.ofObject(ArgbEvaluator(), colorFrom, colorTo).apply {
-                duration = CHANGE_BUTTON_COLOR_DURATION
-                addUpdateListener {
-                    clickableView.backgroundTintList =
-                        ColorStateList.valueOf((it.animatedValue as Int))
-                }
-                start()
-            }
+            animateChangeColor(colorFrom, colorTo, clickableView)
             resultView?.apply {
                 visibility = View.VISIBLE
                 startAnimation(
@@ -50,7 +43,32 @@ abstract class BaseFragment<VBinding : ViewBinding, VM : BaseViewModel>(
                     )
                 )
             }
+            viewModel.getResult()?.let {
+                resultView?.text = context?.getString(it.nameResource)
+                val color = context?.getColor(it.color)
+                color?.let {
+                    resultView?.backgroundTintList = ColorStateList.valueOf(color)
+                }
+            }
+
         }
+    }
+
+    private fun animateChangeColor(colorFrom: Int, colorTo: Int, view: View) {
+        ValueAnimator.ofObject(ArgbEvaluator(), colorFrom, colorTo).apply {
+            duration = CHANGE_BUTTON_COLOR_DURATION
+            addUpdateListener {
+                view.backgroundTintList =
+                    ColorStateList.valueOf((it.animatedValue as Int))
+            }
+            start()
+        }
+    }
+
+    protected fun animateChangeColorAfterClear(view: View) {
+        val colorTo = ContextCompat.getColor(requireContext(), R.color.light_blue)
+        val colorFrom = ContextCompat.getColor(requireContext(), R.color.btn_grey)
+        animateChangeColor(colorFrom, colorTo, view)
     }
 
     companion object {

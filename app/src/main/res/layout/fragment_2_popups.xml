@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -25,8 +26,8 @@
             android:id="@+id/tv_rif_title"
             style="@style/TextStyleTitle"
             android:layout_width="0dp"
-            android:lineSpacingMultiplier="0.83"
             android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="0.83"
             android:paddingVertical="@dimen/padding_title"
             android:text="@string/rif_title"
             app:layout_constraintEnd_toEndOf="@id/gl_right"
@@ -93,19 +94,19 @@
             app:layout_constraintStart_toStartOf="@id/gl_left"
             app:layout_constraintTop_toBottomOf="@id/pp_rif_damage_level" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_result"
-            android:layout_width="0dp"
             style="@style/TextStyleButton"
-            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:background="@drawable/background_rounded_16"
+            android:backgroundTint="@color/result_high"
             android:gravity="center"
             android:paddingVertical="36dp"
-            android:layout_marginHorizontal="16dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:backgroundTint="@color/result_high"
             android:text="@string/high_level"
+            android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@id/btn_clear_data"
             app:layout_constraintEnd_toEndOf="@id/gl_right"
             app:layout_constraintStart_toStartOf="@id/gl_left"
