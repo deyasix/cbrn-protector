@@ -9,5 +9,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="light_blue">#46B2EF</color>
     <color name="hint_grey">#9F9393</color>
+    <color name="btn_grey">#8C8C8C</color>
     <color name="screen_background">#EFECEC</color>
+    <color name="result_high">#B0A32E</color>
+    <color name="result_very_high">#B0452E</color>
+    <color name="result_medium">#46B2EF</color>
+    <color name="result_low">#378657</color>
 </resources>

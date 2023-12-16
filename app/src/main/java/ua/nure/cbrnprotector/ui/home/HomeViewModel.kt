@@ -1,6 +1,10 @@
 package ua.nure.cbrnprotector.ui.home
 
-import androidx.lifecycle.ViewModel
+import ua.nure.cbrnprotector.base.BaseViewModel
+import ua.nure.cbrnprotector.domain.ColoredValuable
 
-class HomeViewModel: ViewModel() {
+class HomeViewModel : BaseViewModel() {
+    override fun getResult(): ColoredValuable? {
+        return null
+    }
 }
