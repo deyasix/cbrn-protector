@@ -10,6 +10,8 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
+import com.google.android.material.snackbar.Snackbar
+import com.google.android.material.snackbar.Snackbar.SnackbarLayout
 import ua.nure.cbrnprotector.R
 
 abstract class BaseFragment<VBinding : ViewBinding, VM : BaseViewModel>(
@@ -69,6 +71,16 @@ abstract class BaseFragment<VBinding : ViewBinding, VM : BaseViewModel>(
         val colorTo = ContextCompat.getColor(requireContext(), R.color.light_blue)
         val colorFrom = ContextCompat.getColor(requireContext(), R.color.btn_grey)
         animateChangeColor(colorFrom, colorTo, view)
+    }
+
+    protected fun showErrorSnackBar(text: String? = "") {
+        val errorLayout = layoutInflater.inflate(R.layout.error_snackbar, null)
+        val snackBar = Snackbar.make(requireActivity().findViewById(android.R.id.content), "", Snackbar.LENGTH_SHORT)
+        (snackBar.view as SnackbarLayout).apply {
+            setPadding(0, 0, 0, 0)
+            addView(errorLayout, 0)
+        }
+        snackBar.show()
     }
 
     companion object {
