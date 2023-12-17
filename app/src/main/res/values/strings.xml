@@ -6,6 +6,7 @@
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>
     <string name="clear_data">Скинути дані</string>
+    <string name="error_not_enough_data">Введіть усі необхідні дані</string>
 
     <string name="very_high_level">Надзвичайно високий</string>
     <string name="high_level">Високий</string>

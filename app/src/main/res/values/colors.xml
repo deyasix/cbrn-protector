@@ -15,4 +15,5 @@
     <color name="result_very_high">#B0452E</color>
     <color name="result_medium">#46B2EF</color>
     <color name="result_low">#378657</color>
+    <color name="error_color">#D3302F</color>
 </resources>
