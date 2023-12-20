@@ -13,4 +13,5 @@
     <dimen name="image_default_size">24dp</dimen>
 
     <dimen name="text_size_16">16sp</dimen>
+    <dimen name="elevation">4dp</dimen>
 </resources>

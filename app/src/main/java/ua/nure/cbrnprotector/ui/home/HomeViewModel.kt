@@ -7,4 +7,6 @@ class HomeViewModel : BaseViewModel() {
     override fun getResult(): ColoredValuable? {
         return null
     }
+
+    override fun clear() {}
 }
