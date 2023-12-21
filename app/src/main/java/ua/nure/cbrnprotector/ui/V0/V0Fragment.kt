@@ -46,7 +46,7 @@ class V0Fragment :
 
     private fun init() {
         with(binding) {
-            tvRifTitle.text = getString(R.string.fragment_v0_title)
+            tvTitle.text = getString(R.string.fragment_v0_title)
             etFirst.inputType = InputType.TYPE_CLASS_NUMBER
             tvFirst.text = getString(R.string.fragment_v0_Nivt)
             etSecond.inputType = InputType.TYPE_CLASS_NUMBER
