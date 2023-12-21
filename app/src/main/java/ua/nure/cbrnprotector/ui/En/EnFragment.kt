@@ -20,6 +20,14 @@ class EnFragment : BaseFragment<Fragment2PopupsBinding, EnViewModel>(
         setResultLogic(binding.btnCalculate, binding.tvResult, binding.btnClearData)
     }
 
+    override fun isValid(): Boolean {
+        if (!viewModel.isValuesValid()) {
+            showErrorSnackBar(getString(R.string.R0_Rn_error))
+            return false
+        }
+        return true
+    }
+
     private fun setListeners() {
         with(binding) {
             ppFirst.onItemSelected = {

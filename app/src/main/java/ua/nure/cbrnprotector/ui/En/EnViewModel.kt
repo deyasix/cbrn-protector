@@ -29,6 +29,13 @@ class EnViewModel : BaseViewModel() {
         _RnState.value = value
     }
 
+    override fun isValuesValid(): Boolean {
+        val Rn = _RnState.value
+        val R0 = _R0State.value
+        if (Rn == null || R0 == null) return true
+        return Rn >= R0
+    }
+
     override fun clear() {
         _R0State.value = null
         _RnState.value = null
