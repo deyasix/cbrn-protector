@@ -59,6 +59,12 @@ open class BasePopupPlaceholder(context: Context, attributes: AttributeSet? = nu
         }
     }
 
+    var hint: CharSequence = placeholder.hint
+        set(value) {
+            placeholder.hint = value
+            field = value
+        }
+
     private fun createPopup(): PopupWindow {
         val popupView = LayoutInflater.from(context).inflate(R.layout.base_popup_layout, null)
         val popupWindow = PopupWindow(

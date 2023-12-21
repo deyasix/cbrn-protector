@@ -20,17 +20,17 @@ class RnuFragment :
 
     private fun setListeners() {
         with(binding) {
-            ppRifProbability.onItemSelected = {
+            ppFirst.onItemSelected = {
                 viewModel.setPy(it.value)
             }
-            ppRifDamageLevel.onItemSelected = {
+            ppSecond.onItemSelected = {
                 viewModel.setVy(it.value)
             }
             viewModel.PyState.observe(viewLifecycleOwner) {
-                if (it == null) ppRifProbability.clearData()
+                if (it == null) ppFirst.clearData()
             }
             viewModel.VyState.observe(viewLifecycleOwner) {
-                if (it == null) ppRifDamageLevel.clearData()
+                if (it == null) ppSecond.clearData()
             }
         }
     }
