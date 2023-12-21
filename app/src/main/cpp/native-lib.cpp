@@ -76,8 +76,7 @@ Java_ua_nure_cbrnprotector_MainActivity_V0(
         jobject /* this */,
         jint sum_N_ivt,
         jint N_oc) {
-
-    return sum_N_ivt / N_oc;
+    return static_cast<float>(sum_N_ivt) / N_oc;
 }
 
 /*
