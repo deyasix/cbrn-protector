@@ -217,7 +217,7 @@ Java_ua_nure_cbrnprotector_MainActivity_Vrhz(JNIEnv *env, jobject thiz, jint N20
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_Rrhz_Critical(JNIEnv *env, jobject thiz, jfloat Rrhz,
+Java_ua_nure_cbrnprotector_ui_RrhzCrit_RrhzCritViewModel_RrhzCritical(JNIEnv *env, jobject thiz, jfloat Rrhz,
                                                       jfloat R0) {
     return Rrhz - R0;
 }
