@@ -14,5 +14,9 @@
             android:id="@+id/nav_hostiles_indicator"
             android:title="@string/navigation_hostiles_indicator"
             />
+        <item
+            android:id="@+id/nav_v0"
+            android:title="@string/navigation_v0"
+            />
     </group>
 </menu>

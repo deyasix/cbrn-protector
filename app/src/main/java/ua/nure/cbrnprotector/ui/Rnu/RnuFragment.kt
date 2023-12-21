@@ -15,7 +15,7 @@ class RnuFragment :
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setListeners()
-        setShowingResultLogic(binding.btnCalculate, binding.tvResult)
+        setResultLogic(binding.btnCalculate, binding.tvResult, binding.btnClearData)
     }
 
     private fun setListeners() {
@@ -25,11 +25,6 @@ class RnuFragment :
             }
             ppRifDamageLevel.onItemSelected = {
                 viewModel.setVy(it.value)
-            }
-            btnClearData.setOnClickListener {
-                animateChangeColorAfterClear(btnCalculate)
-                tvResult.visibility = View.GONE
-                viewModel.clear()
             }
             viewModel.PyState.observe(viewLifecycleOwner) {
                 if (it == null) ppRifProbability.clearData()

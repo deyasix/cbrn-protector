@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.text.*
 import android.view.*
 import android.view.animation.AnimationUtils
-import android.widget.TextView
+import android.widget.*
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
@@ -32,30 +32,39 @@ abstract class BaseFragment<VBinding : ViewBinding, VM : BaseViewModel>(
         return binding.root
     }
 
-    fun setShowingResultLogic(clickableView: View?, resultView: TextView?) {
-        clickableView?.setOnClickListener {
-            val result = viewModel.getResult()
-            if (result == null) {
-                showErrorSnackBar()
-            } else {
-                val colorFrom = ContextCompat.getColor(requireContext(), R.color.light_blue)
-                val colorTo = ContextCompat.getColor(requireContext(), R.color.btn_grey)
-                animateChangeColor(colorFrom, colorTo, clickableView)
-                resultView?.apply {
-                    visibility = View.VISIBLE
-                    startAnimation(
-                        AnimationUtils.loadAnimation(
-                            context,
-                            android.R.anim.slide_in_left
+    fun setResultLogic(buttonToCalculate: Button, resultView: TextView, buttonToClear: Button) {
+        buttonToCalculate.setOnClickListener {
+            if (isValid()) {
+                val result = viewModel.getResult()
+                if (result == null) {
+                    showErrorSnackBar()
+                } else {
+                    val colorFrom = ContextCompat.getColor(requireContext(), R.color.light_blue)
+                    val colorTo = ContextCompat.getColor(requireContext(), R.color.btn_grey)
+                    animateChangeColor(colorFrom, colorTo, buttonToCalculate)
+                    resultView.apply {
+                        visibility = View.VISIBLE
+                        startAnimation(
+                            AnimationUtils.loadAnimation(
+                                context,
+                                android.R.anim.slide_in_left
+                            )
                         )
-                    )
-                }
-                resultView?.text = context?.getString(result.nameResource)
-                val color = context?.getColor(result.color)
-                color?.let {
-                    resultView?.backgroundTintList = ColorStateList.valueOf(color)
+                    }
+                    resultView.text = context?.getString(result.nameResource)
+                    val color = context?.getColor(result.color)
+                    color?.let {
+                        resultView.backgroundTintList = ColorStateList.valueOf(color)
+                    }
                 }
             }
+        }
+        buttonToClear.setOnClickListener {
+            if (resultView.visibility == View.VISIBLE) {
+                animateChangeColorAfterClear(buttonToCalculate)
+                resultView.visibility = View.GONE
+            }
+            viewModel.clear()
         }
     }
 
@@ -79,7 +88,11 @@ abstract class BaseFragment<VBinding : ViewBinding, VM : BaseViewModel>(
     protected fun showErrorSnackBar(text: String? = getString(R.string.error_not_enough_data)) {
         val errorLayout = layoutInflater.inflate(R.layout.error_snackbar, null)
         errorLayout.findViewById<TextView>(R.id.tv_snackbar).text = text
-        val snackBar = Snackbar.make(requireActivity().findViewById(android.R.id.content), "", Snackbar.LENGTH_SHORT)
+        val snackBar = Snackbar.make(
+            requireActivity().findViewById(android.R.id.content),
+            "",
+            Snackbar.LENGTH_SHORT
+        )
         (snackBar.view as SnackbarLayout).apply {
             setPadding(0, 0, 0, 0)
             addView(errorLayout, 0)
@@ -87,15 +100,15 @@ abstract class BaseFragment<VBinding : ViewBinding, VM : BaseViewModel>(
         snackBar.show()
     }
 
-    protected fun getTextWatcher(onChangedText: (Float) -> Unit) : TextWatcher {
+    protected open fun isValid(): Boolean = true
+
+    protected fun getTextWatcher(onChangedText: (String) -> Unit): TextWatcher {
         return object : TextWatcher {
 
             override fun afterTextChanged(s: Editable) {
                 if (s.isNotEmpty()) {
                     try {
-                        val input = s.toString().toFloat()
-                        if (input < 0 || input > 1) showErrorSnackBar("Некоректні дані. Ймовірність не може бути від'ємною або більше одиниці.")
-                        else onChangedText(input)
+                        onChangedText(s.toString())
 
                     } catch (e: NumberFormatException) {
                         showErrorSnackBar(getString(R.string.number_format_error))

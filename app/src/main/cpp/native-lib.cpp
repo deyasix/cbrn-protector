@@ -71,21 +71,12 @@ extern "C" JNIEXPORT jfloat JNICALL Java_ua_nure_cbrnprotector_ui_R0_R0ViewModel
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_V0(
+Java_ua_nure_cbrnprotector_ui_V0_V0ViewModel_V0(
         JNIEnv *env,
         jobject /* this */,
-        jfloatArray N0_ivt,
-        jfloat N_oc) {
-    jsize len = env->GetArrayLength(N0_ivt); // розмір масиву
-    jfloat *body = env->GetFloatArrayElements(N0_ivt, 0);
-    std::vector<float> N0_ivt_vec(body, body + len);
-    env->ReleaseFloatArrayElements(N0_ivt, body, 0);
-
-    float sum = 0.0;
-    for (int i = 0; i < N0_ivt_vec.size(); i++) {
-        sum += N0_ivt_vec[i] / N_oc;
-    }
-    return sum / N_oc;
+        jint sum_N_ivt,
+        jint N_oc) {
+    return static_cast<float>(sum_N_ivt) / N_oc;
 }
 
 /*

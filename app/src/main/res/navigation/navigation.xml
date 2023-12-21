@@ -15,12 +15,19 @@
         android:id="@+id/nav_rif"
         android:name="ua.nure.cbrnprotector.ui.Rnu.RnuFragment"
         android:label="Rну"
-        tools:layout="@layout/fragment_2_popups" />
+        tools:layout="@layout/fragment_2_popups" >
+    </fragment>
 
     <fragment
         android:id="@+id/nav_hostiles_indicator"
         android:name="ua.nure.cbrnprotector.ui.R0.R0Fragment"
         android:label="R0"
+        tools:layout="@layout/fragment_2_edit_text" />
+
+    <fragment
+        android:id="@+id/nav_v0"
+        android:name="ua.nure.cbrnprotector.ui.V0.V0Fragment"
+        android:label="V0"
         tools:layout="@layout/fragment_2_edit_text" />
 
 </navigation>
