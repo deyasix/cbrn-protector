@@ -74,8 +74,8 @@ extern "C" JNIEXPORT jfloat JNICALL
 Java_ua_nure_cbrnprotector_MainActivity_V0(
         JNIEnv *env,
         jobject /* this */,
-        jfloat sum_N_ivt,
-        jfloat N_oc) {
+        jint sum_N_ivt,
+        jint N_oc) {
 
     return sum_N_ivt / N_oc;
 }
