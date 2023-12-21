@@ -3,6 +3,7 @@
     <string name="navigation_home">Home</string>
     <string name="navigation_rif">RIF</string>
     <string name="navigation_hostiles_indicator">Hostiles Indicator</string>
+    <string name="navigation_v0">V0</string>
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>
     <string name="clear_data">Скинути дані</string>
@@ -32,8 +33,14 @@
 
     <string name="et_hint">Введіть кількість</string>
     <string name="number_format_error">Неправильний формат даних</string>
+    <string name="number_out_of_range">Некоректні дані. Ймовірність не може бути від\'ємною або більше одиниці.</string>
+    <string name="Nivt_Nos_error">Загальна кількість особового складу не може бути менша за кількість особового складу військової частини, яка ймовірно втратить життя та здоров’я в умовах РХ зараження</string>
 
     <string name="fragment_r0_title">Показник допустимого ризику досягнення мети бойових дій щодо втрати життя і здоров’я особового складу в умовах РХ зараження</string>
     <string name="fragment_r0_v0">Показник імовірності РХ зараження особового складу підрозділів</string>
-    <string name="fragment_r0_p0">Показник максимально допустимої уразливості особового складу підрозділів в умовах РХ зараження.</string>
+    <string name="fragment_r0_p0">Показник максимально допустимої уразливості особового складу підрозділів в умовах РХ зараження</string>
+
+    <string name="fragment_v0_title">Показник максимально допустимої уразливості особового складу підрозділів в умовах РХ зараження</string>
+    <string name="fragment_v0_Nivt">Кількість особового складу військової частини, яка ймовірно втратить життя та здоров’я в умовах РХ зараження</string>
+    <string name="fragment_v0_Nos">Загальна кількість особового складу</string>
 </resources>

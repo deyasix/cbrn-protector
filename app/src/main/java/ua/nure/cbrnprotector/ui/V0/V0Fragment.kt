@@ -1,27 +1,27 @@
-package ua.nure.cbrnprotector.ui.R0
+package ua.nure.cbrnprotector.ui.V0
 
 import android.os.Bundle
+import android.text.InputType
 import android.view.View
 import androidx.fragment.app.viewModels
 import ua.nure.cbrnprotector.R
 import ua.nure.cbrnprotector.base.BaseFragment
 import ua.nure.cbrnprotector.databinding.Fragment2EditTextBinding
 
-class R0Fragment :
-    BaseFragment<Fragment2EditTextBinding, R0ViewModel>(
-        Fragment2EditTextBinding::inflate
-    ) {
-    override val viewModel: R0ViewModel by viewModels()
 
+class V0Fragment :
+    BaseFragment<Fragment2EditTextBinding, V0ViewModel>(Fragment2EditTextBinding::inflate) {
+    override val viewModel: V0ViewModel by viewModels()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        init()
         setListeners()
         setResultLogic(binding.btnCalculate, binding.tvResult, binding.btnClearData)
     }
 
     override fun isValid(): Boolean {
         if (!viewModel.isValuesValid()) {
-            showErrorSnackBar(getString(R.string.number_out_of_range))
+            showErrorSnackBar(getString(R.string.Nivt_Nos_error))
             return false
         }
         return true
@@ -30,17 +30,27 @@ class R0Fragment :
     private fun setListeners() {
         with(binding) {
             etFirst.addTextChangedListener(getTextWatcher {
-                viewModel.setV0(it.toFloat())
+                viewModel.setNivt(it.toInt())
             })
             etSecond.addTextChangedListener(getTextWatcher {
-                viewModel.setP0(it.toFloat())
+                viewModel.setNos(it.toInt())
             })
-            viewModel.V0State.observe(viewLifecycleOwner) {
+            viewModel.NivtState.observe(viewLifecycleOwner) {
                 if (it == null) etFirst.text.clear()
             }
-            viewModel.P0State.observe(viewLifecycleOwner) {
+            viewModel.NosState.observe(viewLifecycleOwner) {
                 if (it == null) etSecond.text.clear()
             }
+        }
+    }
+
+    private fun init() {
+        with(binding) {
+            tvRifTitle.text = getString(R.string.fragment_v0_title)
+            etFirst.inputType = InputType.TYPE_CLASS_NUMBER
+            tvFirst.text = getString(R.string.fragment_v0_Nivt)
+            etSecond.inputType = InputType.TYPE_CLASS_NUMBER
+            tvSecond.text = getString(R.string.fragment_v0_Nos)
         }
     }
 }

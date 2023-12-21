@@ -33,6 +33,14 @@ class R0ViewModel : BaseViewModel() {
         _P0State.value = null
     }
 
+    override fun isValuesValid(): Boolean {
+        val V0 = V0State.value
+        val P0 = P0State.value
+        if (V0 == null || P0 == null) return true
+        if (V0 < 0 || V0 > 1 || P0 < 0 || P0 > 1) return false
+        return true
+    }
+
     init {
         System.loadLibrary("cbrnprotector")
     }

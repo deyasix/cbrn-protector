@@ -71,7 +71,7 @@ extern "C" JNIEXPORT jfloat JNICALL Java_ua_nure_cbrnprotector_ui_R0_R0ViewModel
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_V0(
+Java_ua_nure_cbrnprotector_ui_V0_V0ViewModel_V0(
         JNIEnv *env,
         jobject /* this */,
         jint sum_N_ivt,
