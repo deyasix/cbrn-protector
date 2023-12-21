@@ -15,7 +15,7 @@
         android:id="@+id/nav_rif"
         android:name="ua.nure.cbrnprotector.ui.Rnu.RnuFragment"
         android:label="Rну"
-        tools:layout="@layout/fragment_2_popups"></fragment>
+        tools:layout="@layout/fragment_2_popups" />
 
     <fragment
         android:id="@+id/nav_hostiles_indicator"
@@ -37,6 +37,11 @@
         android:id="@+id/nav_Rrhz"
         android:name="ua.nure.cbrnprotector.ui.Rrhz.RrhzFragment"
         android:label="Rrhz"
+        tools:layout="@layout/fragment_2_popups" />
+    <fragment
+        android:id="@+id/nav_RrhzCrit"
+        android:name="ua.nure.cbrnprotector.ui.RrhzCrit.RrhzCritFragment"
+        android:label="RrhzCrit"
         tools:layout="@layout/fragment_2_popups" />
 
 </navigation>
