@@ -5,6 +5,7 @@
     <string name="navigation_hostiles_indicator">Hostiles Indicator</string>
     <string name="navigation_v0">V0</string>
     <string name="navigation_En">En</string>
+    <string name="navigation_Rrhz">Rrhz</string>
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>
     <string name="clear_data">Скинути дані</string>
@@ -50,4 +51,8 @@
     <string name="fragment_En_title">Показник ефективності виконання кожного завдання системи ХБРЯ захисту</string>
     <string name="fragment_En_r0">Допустимий ризик досягнення мети бойових дій щодо n-го завдання системи ХБРЯ захисту</string>
     <string name="fragment_En_Rn">Імовірний ризик досягнення мети бойових дій до планування n-го завдання системи ХБРЯ захисту або очікуваний ризик досягнення мети бойових дій після планування n-го завдання системи ХБРЯ захисту</string>
+
+    <string name="fragment_Rrhz_title">Показник допустимого ризику досягнення мети бойових дій щодо втрати життя і здоров’я особового складу в умовах РХ зараження</string>
+    <string name="fragment_Rrhz_Prhz">Показник імовірності РХ зараження особового складу підрозділів</string>
+    <string name="fragment_Rrhz_Vrhz">Показник максимально допустимої уразливості особового складу підрозділів в умовах РХ зараження</string>
 </resources>

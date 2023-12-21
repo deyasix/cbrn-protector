@@ -92,7 +92,7 @@ Java_ua_nure_cbrnprotector_ui_V0_V0ViewModel_V0(
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_Rrhz(JNIEnv *env, jobject /* this */, jfloat Prhz,
+Java_ua_nure_cbrnprotector_ui_Rrhz_RrhzViewModel_Rrhz(JNIEnv *env, jobject /* this */, jfloat Prhz,
                                              jfloat Vrhz) {
     return Prhz * Vrhz;
 }
