@@ -17,7 +17,7 @@
   планування n-го завдання системи ХБРЯ захисту.
 */
 
-extern "C" JNIEXPORT jfloat JNICALL Java_ua_nure_cbrnprotector_MainActivity_En(
+extern "C" JNIEXPORT jfloat JNICALL Java_ua_nure_cbrnprotector_ui_En_EnViewModel_En(
         JNIEnv *env, jobject /* this */, jfloat Rn, jfloat R0) {
     return 100 - (Rn - R0) / Rn * 100;
 }

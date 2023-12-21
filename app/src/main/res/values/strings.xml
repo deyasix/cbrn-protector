@@ -4,6 +4,7 @@
     <string name="navigation_rif">RIF</string>
     <string name="navigation_hostiles_indicator">Hostiles Indicator</string>
     <string name="navigation_v0">V0</string>
+    <string name="navigation_En">En</string>
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>
     <string name="clear_data">Скинути дані</string>
@@ -43,4 +44,8 @@
     <string name="fragment_v0_title">Показник максимально допустимої уразливості особового складу підрозділів в умовах РХ зараження</string>
     <string name="fragment_v0_Nivt">Кількість особового складу військової частини, яка ймовірно втратить життя та здоров’я в умовах РХ зараження</string>
     <string name="fragment_v0_Nos">Загальна кількість особового складу</string>
+
+    <string name="fragment_En_title">Показник ефективності виконання кожного завдання системи ХБРЯ захисту</string>
+    <string name="fragment_En_r0">Допустимий ризик досягнення мети бойових дій щодо n-го завдання системи ХБРЯ захисту</string>
+    <string name="fragment_En_Rn">Імовірний ризик досягнення мети бойових дій до планування n-го завдання системи ХБРЯ захисту або очікуваний ризик досягнення мети бойових дій після планування n-го завдання системи ХБРЯ захисту</string>
 </resources>
