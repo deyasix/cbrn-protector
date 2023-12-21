@@ -17,7 +17,7 @@
   планування n-го завдання системи ХБРЯ захисту.
 */
 
-extern "C" JNIEXPORT jfloat JNICALL Java_ua_nure_cbrnprotector_MainActivity_En(
+extern "C" JNIEXPORT jfloat JNICALL Java_ua_nure_cbrnprotector_ui_En_EnViewModel_En(
         JNIEnv *env, jobject /* this */, jfloat Rn, jfloat R0) {
     return 1 - (Rn - R0) / Rn;
 }
@@ -34,7 +34,7 @@ extern "C" JNIEXPORT jfloat JNICALL Java_ua_nure_cbrnprotector_MainActivity_En(
   Vy – показник ступеня ураження об’єктів противника РПВ.
 */
 
-extern "C" JNIEXPORT jfloat JNICALL Java_ua_nure_cbrnprotector_MainActivity_Rny(
+extern "C" JNIEXPORT jfloat JNICALL Java_ua_nure_cbrnprotector_ui_Rnu_RnuViewModel_Rny(
         JNIEnv *env, jobject /* this */, jfloat Py, jfloat Vy) {
     return 1 - Py * Vy;
 }
@@ -52,7 +52,7 @@ extern "C" JNIEXPORT jfloat JNICALL Java_ua_nure_cbrnprotector_MainActivity_Rny(
 в умовах РХ зараження.
 */
 
-extern "C" JNIEXPORT jfloat JNICALL Java_ua_nure_cbrnprotector_MainActivity_R0(
+extern "C" JNIEXPORT jfloat JNICALL Java_ua_nure_cbrnprotector_ui_R0_R0ViewModel_R0(
         JNIEnv *env, jobject /* this */, jfloat P0, jfloat V0) {
     return P0 * V0;
 }
@@ -71,7 +71,7 @@ extern "C" JNIEXPORT jfloat JNICALL Java_ua_nure_cbrnprotector_MainActivity_R0(
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_V0(
+Java_ua_nure_cbrnprotector_ui_V0_V0ViewModel_V0(
         JNIEnv *env,
         jobject /* this */,
         jint sum_N_ivt,
@@ -92,8 +92,8 @@ Java_ua_nure_cbrnprotector_MainActivity_V0(
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_Rrhz(JNIEnv *env, jobject /* this */, jfloat Prhz,
-                                             jfloat Vrhz) {
+Java_ua_nure_cbrnprotector_ui_Rrhz_RrhzViewModel_Rrhz(JNIEnv *env, jobject /* this */, jfloat Prhz,
+                                                      jfloat Vrhz) {
     return Prhz * Vrhz;
 }
 
@@ -122,30 +122,26 @@ Java_ua_nure_cbrnprotector_MainActivity_Rrhz(JNIEnv *env, jobject /* this */, jf
 
 */
 
-extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_Pjirhz(JNIEnv *env, jobject thiss, jfloatArray D_j_irz,
-                                               jfloat n_irhz, jint j) {
-    jfloat *D_j_irz_ptr = env->GetFloatArrayElements(D_j_irz, 0);
-    jfloat sum = 0.0;
-    for (int i = 0; i <= j; i++) {
-        sum += D_j_irz_ptr[i];
-    }
-    env->ReleaseFloatArrayElements(D_j_irz, D_j_irz_ptr, 0);
-    return sum / n_irhz;
+extern "C"
+JNIEXPORT jfloat JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_Pjirhz(JNIEnv *env, jobject /* this */, jint D_j_irz,
+                                               jint n_irhz) {
+    return static_cast<jfloat>(D_j_irz) / n_irhz;
 }
 
-extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_Prhz(JNIEnv *env, jobject thiss, jfloatArray D_j_irz,
-                                             jfloat n_irhz, jfloat N_rhz) {
-    jfloat *D_j_irz_ptr = env->GetFloatArrayElements(D_j_irz, 0);
-    jfloat sum = 0.0;
-    int size = env->GetArrayLength(D_j_irz);
-    for (int i = 0; i < size; i++) {
-        jfloat P_j_irhz = Java_ua_nure_cbrnprotector_MainActivity_Pjirhz(env, thiss, D_j_irz,
-                                                                         n_irhz, i);
-        sum += P_j_irhz;
+extern "C"
+JNIEXPORT jfloat JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_Prhz(JNIEnv *env, jobject /* this */, jintArray D_j_irz,
+                                             jintArray n_irhz, jint N_rhz) {
+    jfloat sum = 0;
+    jboolean isCopy;
+    jint *D_j_irz_ptr = env->GetIntArrayElements(D_j_irz, &isCopy);
+    jint *n_irhz_ptr = env->GetIntArrayElements(n_irhz, &isCopy);
+    for (int i = 0; i < N_rhz; i++) {
+        sum += static_cast<jfloat>(D_j_irz_ptr[i]) / n_irhz_ptr[i];
     }
-    env->ReleaseFloatArrayElements(D_j_irz, D_j_irz_ptr, 0);
+    env->ReleaseIntArrayElements(D_j_irz, D_j_irz_ptr, JNI_ABORT);
+    env->ReleaseIntArrayElements(n_irhz, n_irhz_ptr, JNI_ABORT);
     return sum / N_rhz;
 }
 
@@ -199,7 +195,7 @@ Java_ua_nure_cbrnprotector_MainActivity_N300(JNIEnv *env, jobject thiz, jintArra
 extern "C" JNIEXPORT jfloat JNICALL
 Java_ua_nure_cbrnprotector_MainActivity_Vrhz(JNIEnv *env, jobject thiz, jint N200, jint N300,
                                              jint N_oc) {
-    return (N200 + N300) / (jfloat) N_oc;
+    return static_cast<float>(N200 + N300) / N_oc;
 }
 
 /*
@@ -346,9 +342,10 @@ Java_ua_nure_cbrnprotector_MainActivity_W_HBRYA(JNIEnv *env, jobject thiz,
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_N_j_i(JNIEnv *env, jobject thiz, jfloatArray w_i, jfloatArray a_i, jint j) {
-    jfloat* w_i_ptr = env->GetFloatArrayElements(w_i, 0);
-    jfloat* a_i_ptr = env->GetFloatArrayElements(a_i, 0);
+Java_ua_nure_cbrnprotector_MainActivity_N_j_i(JNIEnv *env, jobject thiz, jfloatArray w_i,
+                                              jfloatArray a_i, jint j) {
+    jfloat *w_i_ptr = env->GetFloatArrayElements(w_i, 0);
+    jfloat *a_i_ptr = env->GetFloatArrayElements(a_i, 0);
     jfloat sum = 0.0;
     for (int i = 0; i <= j; i++) {
         sum += w_i_ptr[i];
@@ -366,10 +363,11 @@ Java_ua_nure_cbrnprotector_MainActivity_N_j_i(JNIEnv *env, jobject thiz, jfloatA
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_K_n(JNIEnv *env, jobject thiz, jfloatArray w_i, jfloatArray a_i, jfloatArray N_i_um) {
-    jfloat* w_i_ptr = env->GetFloatArrayElements(w_i, 0);
-    jfloat* a_i_ptr = env->GetFloatArrayElements(a_i, 0);
-    jfloat* N_i_um_ptr = env->GetFloatArrayElements(N_i_um, 0);
+Java_ua_nure_cbrnprotector_MainActivity_K_n(JNIEnv *env, jobject thiz, jfloatArray w_i,
+                                            jfloatArray a_i, jfloatArray N_i_um) {
+    jfloat *w_i_ptr = env->GetFloatArrayElements(w_i, 0);
+    jfloat *a_i_ptr = env->GetFloatArrayElements(a_i, 0);
+    jfloat *N_i_um_ptr = env->GetFloatArrayElements(N_i_um, 0);
     jfloat K = 0.0;
     int size = env->GetArrayLength(w_i);
     for (int i = 0; i < size; i++) {
@@ -389,9 +387,10 @@ Java_ua_nure_cbrnprotector_MainActivity_K_n(JNIEnv *env, jobject thiz, jfloatArr
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_C_n(JNIEnv *env, jobject thiz, jfloatArray N_i, jfloatArray c_i) {
-    jfloat* N_i_ptr = env->GetFloatArrayElements(N_i, 0);
-    jfloat* c_i_ptr = env->GetFloatArrayElements(c_i, 0);
+Java_ua_nure_cbrnprotector_MainActivity_C_n(JNIEnv *env, jobject thiz, jfloatArray N_i,
+                                            jfloatArray c_i) {
+    jfloat *N_i_ptr = env->GetFloatArrayElements(N_i, 0);
+    jfloat *c_i_ptr = env->GetFloatArrayElements(c_i, 0);
     jfloat C = 0.0;
     int size = env->GetArrayLength(N_i);
     for (int i = 0; i < size; i++) {
