@@ -34,7 +34,7 @@ extern "C" JNIEXPORT jfloat JNICALL Java_ua_nure_cbrnprotector_MainActivity_En(
   Vy – показник ступеня ураження об’єктів противника РПВ.
 */
 
-extern "C" JNIEXPORT jfloat JNICALL Java_ua_nure_cbrnprotector_ui_rif_RIFDamageLevelViewModel_Rny(
+extern "C" JNIEXPORT jfloat JNICALL Java_ua_nure_cbrnprotector_ui_Rnu_RnuViewModel_Rny(
         JNIEnv *env, jobject /* this */, jfloat Py, jfloat Vy) {
     return 1 - Py * Vy;
 }
@@ -52,7 +52,7 @@ extern "C" JNIEXPORT jfloat JNICALL Java_ua_nure_cbrnprotector_ui_rif_RIFDamageL
 в умовах РХ зараження.
 */
 
-extern "C" JNIEXPORT jfloat JNICALL Java_ua_nure_cbrnprotector_MainActivity_R0(
+extern "C" JNIEXPORT jfloat JNICALL Java_ua_nure_cbrnprotector_ui_R0_R0ViewModel_R0(
         JNIEnv *env, jobject /* this */, jfloat P0, jfloat V0) {
     return P0 * V0;
 }

@@ -4,6 +4,7 @@ import android.animation.ArgbEvaluator
 import android.animation.ValueAnimator
 import android.content.res.ColorStateList
 import android.os.Bundle
+import android.text.*
 import android.view.*
 import android.view.animation.AnimationUtils
 import android.widget.TextView
@@ -33,26 +34,28 @@ abstract class BaseFragment<VBinding : ViewBinding, VM : BaseViewModel>(
 
     fun setShowingResultLogic(clickableView: View?, resultView: TextView?) {
         clickableView?.setOnClickListener {
-            val colorFrom = ContextCompat.getColor(requireContext(), R.color.light_blue)
-            val colorTo = ContextCompat.getColor(requireContext(), R.color.btn_grey)
-            animateChangeColor(colorFrom, colorTo, clickableView)
-            resultView?.apply {
-                visibility = View.VISIBLE
-                startAnimation(
-                    AnimationUtils.loadAnimation(
-                        context,
-                        android.R.anim.slide_in_left
+            val result = viewModel.getResult()
+            if (result == null) {
+                showErrorSnackBar()
+            } else {
+                val colorFrom = ContextCompat.getColor(requireContext(), R.color.light_blue)
+                val colorTo = ContextCompat.getColor(requireContext(), R.color.btn_grey)
+                animateChangeColor(colorFrom, colorTo, clickableView)
+                resultView?.apply {
+                    visibility = View.VISIBLE
+                    startAnimation(
+                        AnimationUtils.loadAnimation(
+                            context,
+                            android.R.anim.slide_in_left
+                        )
                     )
-                )
-            }
-            viewModel.getResult()?.let {
-                resultView?.text = context?.getString(it.nameResource)
-                val color = context?.getColor(it.color)
+                }
+                resultView?.text = context?.getString(result.nameResource)
+                val color = context?.getColor(result.color)
                 color?.let {
                     resultView?.backgroundTintList = ColorStateList.valueOf(color)
                 }
             }
-
         }
     }
 
@@ -73,14 +76,45 @@ abstract class BaseFragment<VBinding : ViewBinding, VM : BaseViewModel>(
         animateChangeColor(colorFrom, colorTo, view)
     }
 
-    protected fun showErrorSnackBar(text: String? = "") {
+    protected fun showErrorSnackBar(text: String? = getString(R.string.error_not_enough_data)) {
         val errorLayout = layoutInflater.inflate(R.layout.error_snackbar, null)
+        errorLayout.findViewById<TextView>(R.id.tv_snackbar).text = text
         val snackBar = Snackbar.make(requireActivity().findViewById(android.R.id.content), "", Snackbar.LENGTH_SHORT)
         (snackBar.view as SnackbarLayout).apply {
             setPadding(0, 0, 0, 0)
             addView(errorLayout, 0)
         }
         snackBar.show()
+    }
+
+    protected fun getTextWatcher(onChangedText: (Float) -> Unit) : TextWatcher {
+        return object : TextWatcher {
+
+            override fun afterTextChanged(s: Editable) {
+                if (s.isNotEmpty()) {
+                    try {
+                        val input = s.toString().toFloat()
+                        if (input < 0 || input > 1) showErrorSnackBar("Некоректні дані. Ймовірність не може бути від'ємною або більше одиниці.")
+                        else onChangedText(input)
+
+                    } catch (e: NumberFormatException) {
+                        showErrorSnackBar(getString(R.string.number_format_error))
+                    }
+                }
+            }
+
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
+            }
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
+            }
+        }
     }
 
     companion object {

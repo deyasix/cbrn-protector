@@ -8,12 +8,12 @@
     app:strokeWidth="0dp">
 
     <TextView
+        android:id="@+id/tv_snackbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_marginStart="16dp"
         android:drawablePadding="16dp"
-        android:text="@string/error_not_enough_data"
         android:textColor="@color/white"
         android:textSize="@dimen/text_size_16"
         app:drawableStartCompat="@drawable/ic_error" />

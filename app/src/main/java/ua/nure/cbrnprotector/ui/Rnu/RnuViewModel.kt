@@ -1,12 +1,11 @@
-package ua.nure.cbrnprotector.ui.rif
+package ua.nure.cbrnprotector.ui.Rnu
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.*
 import ua.nure.cbrnprotector.base.BaseViewModel
 import ua.nure.cbrnprotector.domain.ColoredValuable
 import ua.nure.cbrnprotector.domain.Risk
 
-class RIFDamageLevelViewModel : BaseViewModel() {
+class RnuViewModel : BaseViewModel() {
 
     private val _PyState = MutableLiveData<Float?>()
     val PyState: LiveData<Float?>
@@ -18,7 +17,7 @@ class RIFDamageLevelViewModel : BaseViewModel() {
     override fun getResult(): ColoredValuable? {
         val Py = _PyState.value
         val Vy = _VyState.value
-        val result = if (Py != null && Vy != null) Rny(Py, Vy) else 0f
+        val result = if (Py != null && Vy != null) Rny(Py, Vy) else return null
         return Risk.findByValue(result)
     }
 
@@ -30,7 +29,7 @@ class RIFDamageLevelViewModel : BaseViewModel() {
         _VyState.value = value
     }
 
-    fun clear() {
+    override fun clear() {
         _PyState.value = null
         _VyState.value = null
     }

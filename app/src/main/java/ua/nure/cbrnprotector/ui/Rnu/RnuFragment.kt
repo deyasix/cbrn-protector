@@ -1,4 +1,4 @@
-package ua.nure.cbrnprotector.ui.rif
+package ua.nure.cbrnprotector.ui.Rnu
 
 import android.os.Bundle
 import android.view.View
@@ -7,10 +7,10 @@ import ua.nure.cbrnprotector.base.BaseFragment
 import ua.nure.cbrnprotector.databinding.Fragment2PopupsBinding
 
 
-class RIFDamageLevelFragment :
-    BaseFragment<Fragment2PopupsBinding, RIFDamageLevelViewModel>(Fragment2PopupsBinding::inflate) {
+class RnuFragment :
+    BaseFragment<Fragment2PopupsBinding, RnuViewModel>(Fragment2PopupsBinding::inflate) {
 
-    override val viewModel: RIFDamageLevelViewModel by viewModels()
+    override val viewModel: RnuViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
