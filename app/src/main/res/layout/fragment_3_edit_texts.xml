@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextStyleTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="0.83"
+            android:paddingVertical="@dimen/padding_title"
+            android:text="@string/R0"
+            app:layout_constraintEnd_toEndOf="@id/gl_right"
+            app:layout_constraintStart_toStartOf="@id/gl_left"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_first"
+            style="@style/TextStyleBody"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_r0_v0"
+            app:layout_constraintBottom_toTopOf="@id/et_first"
+            app:layout_constraintEnd_toEndOf="@id/gl_right"
+            app:layout_constraintStart_toStartOf="@id/gl_left"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <EditText
+            android:id="@+id/et_first"
+            style="@style/TextStyleBody"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/placeholder_height"
+            android:layout_marginVertical="8dp"
+            android:background="@drawable/background_rounded_16"
+            android:elevation="@dimen/elevation"
+            android:hint="@string/et_hint"
+            android:inputType="number"
+            android:paddingHorizontal="12dp"
+            android:textColorHint="@color/hint_grey"
+            app:layout_constraintBottom_toTopOf="@id/tv_second"
+            app:layout_constraintEnd_toEndOf="@id/gl_right"
+            app:layout_constraintStart_toStartOf="@id/gl_left"
+            app:layout_constraintTop_toBottomOf="@id/et_first"
+            app:popup_values="@array/probabilities" />
+
+        <TextView
+            android:id="@+id/tv_second"
+            style="@style/TextStyleBody"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/fragment_r0_p0"
+            app:layout_constraintBottom_toTopOf="@id/et_second"
+            app:layout_constraintEnd_toEndOf="@id/gl_right"
+            app:layout_constraintStart_toStartOf="@id/gl_left"
+            app:layout_constraintTop_toBottomOf="@id/et_first" />
+
+        <EditText
+            android:id="@+id/et_second"
+            style="@style/TextStyleBody"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/placeholder_height"
+            android:layout_marginVertical="8dp"
+            android:background="@drawable/background_rounded_16"
+            android:elevation="@dimen/elevation"
+            android:hint="@string/et_hint"
+            android:inputType="numberDecimal"
+            android:paddingHorizontal="12dp"
+            android:textColorHint="@color/hint_grey"
+            app:layout_constraintBottom_toTopOf="@id/tv_third"
+            app:layout_constraintEnd_toEndOf="@id/gl_right"
+            app:layout_constraintStart_toStartOf="@id/gl_left"
+            app:layout_constraintTop_toBottomOf="@id/tv_second"
+            app:popup_values="@array/probabilities" />
+
+        <TextView
+            android:id="@+id/tv_third"
+            style="@style/TextStyleBody"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/fragment_r0_p0"
+            app:layout_constraintBottom_toTopOf="@id/et_third"
+            app:layout_constraintEnd_toEndOf="@id/gl_right"
+            app:layout_constraintStart_toStartOf="@id/gl_left"
+            app:layout_constraintTop_toBottomOf="@id/et_second" />
+
+        <EditText
+            android:id="@+id/et_third"
+            style="@style/TextStyleBody"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/placeholder_height"
+            android:layout_marginVertical="8dp"
+            android:background="@drawable/background_rounded_16"
+            android:elevation="@dimen/elevation"
+            android:hint="@string/et_hint"
+            android:inputType="number"
+            android:paddingHorizontal="12dp"
+            android:textColorHint="@color/hint_grey"
+            app:layout_constraintBottom_toTopOf="@id/btn_calculate"
+            app:layout_constraintEnd_toEndOf="@id/gl_right"
+            app:layout_constraintStart_toStartOf="@id/gl_left"
+            app:layout_constraintTop_toBottomOf="@id/tv_third"
+            app:popup_values="@array/probabilities" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_calculate"
+            style="@style/ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:backgroundTint="?colorPrimary"
+            android:text="@string/calculate"
+            app:layout_constraintBottom_toTopOf="@id/tv_result"
+            app:layout_constraintEnd_toEndOf="@id/gl_right"
+            app:layout_constraintStart_toStartOf="@id/gl_left"
+            app:layout_constraintTop_toBottomOf="@id/et_third" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_result"
+            style="@style/TextStyleButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/background_rounded_16"
+            android:backgroundTint="@color/result_high"
+            android:gravity="center"
+            android:paddingVertical="36dp"
+            android:text="@string/high_level"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/btn_clear_data"
+            app:layout_constraintEnd_toEndOf="@id/gl_right"
+            app:layout_constraintStart_toStartOf="@id/gl_left"
+            app:layout_constraintTop_toBottomOf="@id/btn_calculate" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_clear_data"
+            style="@style/ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:backgroundTint="@color/black"
+            android:text="@string/clear_data"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/gl_right"
+            app:layout_constraintStart_toStartOf="@id/gl_left"
+            app:layout_constraintTop_toBottomOf="@id/tv_result" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

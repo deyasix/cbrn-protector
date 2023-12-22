@@ -31,5 +31,8 @@
         <item
             android:id="@+id/nav_Ehbrya0"
             android:title="@string/navigation_Ehbrya0" />
+        <item
+            android:id="@+id/nav_Whbrya"
+            android:title="@string/navigation_Whbrya" />
     </group>
 </menu>

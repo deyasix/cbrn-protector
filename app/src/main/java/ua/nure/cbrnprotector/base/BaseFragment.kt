@@ -1,7 +1,6 @@
 package ua.nure.cbrnprotector.base
 
-import android.animation.ArgbEvaluator
-import android.animation.ValueAnimator
+import android.animation.*
 import android.content.res.ColorStateList
 import android.os.Bundle
 import android.text.*
@@ -32,7 +31,11 @@ abstract class BaseFragment<VBinding : ViewBinding, VM : BaseViewModel>(
         return binding.root
     }
 
-    fun setResultLogic(buttonToCalculate: Button, resultView: TextView, buttonToClear: Button) {
+    protected open fun setResultLogic(
+        buttonToCalculate: Button,
+        resultView: TextView,
+        buttonToClear: Button
+    ) {
         buttonToCalculate.setOnClickListener {
             if (isValid()) {
                 val result = viewModel.getResult()
@@ -68,7 +71,7 @@ abstract class BaseFragment<VBinding : ViewBinding, VM : BaseViewModel>(
         }
     }
 
-    private fun animateChangeColor(colorFrom: Int, colorTo: Int, view: View) {
+    protected fun animateChangeColor(colorFrom: Int, colorTo: Int, view: View) {
         ValueAnimator.ofObject(ArgbEvaluator(), colorFrom, colorTo).apply {
             duration = CHANGE_BUTTON_COLOR_DURATION
             addUpdateListener {
