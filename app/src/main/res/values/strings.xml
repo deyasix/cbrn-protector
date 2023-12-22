@@ -9,6 +9,7 @@
     <string name="navigation_RrhzCrit">Критичне Rrhz</string>
     <string name="navigation_EhbryaNec">Eхбря необхідне</string>
     <string name="navigation_Ehbrya0">Eхбря нульове</string>
+    <string name="navigation_Whbrya">Wхбря</string>
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>
     <string name="clear_data">Скинути дані</string>
@@ -64,4 +65,9 @@
     <string name="fragment_EhbryaNec_title">Обчислення необхідної ефективності виконання заходів ХБРЯ захисту</string>
 
     <string name="fragment_Ehbrya0_title">Обчислення ефективності виконання заходів ХБРЯ захисту військовими частинами без підрозділів РХБ захисту</string>
+
+    <string name="fragment_Whbrya_title">Визначення загального обсягу завдань відповідно до РХ загроз</string>
+    <string name="Wvo">Показник обсягу заходів щодо виявлення та оцінювання РХБ обстановки</string>
+    <string name="Wpg">Показник обсягу заходів щодо підтримання живучості військ в умовах РХ зараження</string>
+    <string name="Wln">Показник обсягу заходів щодо ліквідації наслідків РХ зараження</string>
 </resources>

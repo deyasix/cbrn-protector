@@ -27,7 +27,7 @@
         android:id="@+id/nav_v0"
         android:name="ua.nure.cbrnprotector.ui.V0.V0Fragment"
         android:label="V0"
-        tools:layout="@layout/fragment_2_edit_text" />
+        tools:layout="@layout/fragment_2_edit_texts" />
     <fragment
         android:id="@+id/nav_En"
         android:name="ua.nure.cbrnprotector.ui.En.EnFragment"
@@ -42,7 +42,7 @@
         android:id="@+id/nav_RrhzCrit"
         android:name="ua.nure.cbrnprotector.ui.RrhzCrit.RrhzCritFragment"
         android:label="RrhzCrit"
-        tools:layout="@layout/fragment_2_popups" />
+        tools:layout="@layout/fragment_1_popup" />
     <fragment
         android:id="@+id/nav_EhbryaNec"
         android:name="ua.nure.cbrnprotector.ui.EhbryaNec.EhbryaNecFragment"
@@ -53,4 +53,9 @@
         android:name="ua.nure.cbrnprotector.ui.Ehbrya0.Ehbrya0Fragment"
         android:label="Eхбря нульове"
         tools:layout="@layout/fragment_2_popups" />
+    <fragment
+        android:id="@+id/nav_Whbrya"
+        android:name="ua.nure.cbrnprotector.ui.Whbrya.WhbryaFragment"
+        android:label="Wхбря"
+        tools:layout="@layout/fragment_3_edit_texts" />
 </navigation>

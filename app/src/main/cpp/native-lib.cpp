@@ -283,11 +283,11 @@ Java_ua_nure_cbrnprotector_MainActivity_R_hbrya_rhz_och(JNIEnv *env, jobject thi
 
 */
 
-extern "C" JNIEXPORT jfloat JNICALL
+extern "C" JNIEXPORT jint JNICALL
 Java_ua_nure_cbrnprotector_MainActivity_W_VO(JNIEnv *env, jobject thiz,
-                                             jfloat w_phr,
-                                             jfloat w_rjk,
-                                             jfloat w0) {
+                                             jint w_phr,
+                                             jint w_rjk,
+                                             jint w0) {
     return w_phr + w_rjk + w0;
 }
 
@@ -297,11 +297,11 @@ Java_ua_nure_cbrnprotector_MainActivity_W_VO(JNIEnv *env, jobject thiz,
 
 */
 
-extern "C" JNIEXPORT jfloat JNICALL
+extern "C" JNIEXPORT jint JNICALL
 Java_ua_nure_cbrnprotector_MainActivity_W_PJ(JNIEnv *env, jobject thiz,
-                                             jfloat w_on,
-                                             jfloat w_zikz,
-                                             jfloat w_poz) {
+                                             jint w_on,
+                                             jint w_zikz,
+                                             jint w_poz) {
     return w_on + w_poz + w_zikz;
 }
 
@@ -311,11 +311,11 @@ Java_ua_nure_cbrnprotector_MainActivity_W_PJ(JNIEnv *env, jobject thiz,
 
 */
 
-extern "C" JNIEXPORT jfloat JNICALL
+extern "C" JNIEXPORT jint JNICALL
 Java_ua_nure_cbrnprotector_MainActivity_W_LN(JNIEnv *env, jobject thiz,
-                                             jfloat w_oc,
-                                             jfloat w_ovt,
-                                             jfloat w_m) {
+                                             jint w_oc,
+                                             jint w_ovt,
+                                             jint w_m) {
     return w_oc + w_ovt + w_m;
 }
 
@@ -325,13 +325,12 @@ Java_ua_nure_cbrnprotector_MainActivity_W_LN(JNIEnv *env, jobject thiz,
 
 */
 
-float W_HBRYA(float W_VO, float W_PG, float W_LN) { return W_VO + W_PG + W_LN; }
 
-extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_W_HBRYA(JNIEnv *env, jobject thiz,
-                                                jfloat W_VO,
-                                                jfloat W_PG,
-                                                jfloat W_LN) {
+extern "C" JNIEXPORT jint JNICALL
+Java_ua_nure_cbrnprotector_ui_Whbrya_WhbryaViewModel_WHBRYA(JNIEnv *env, jobject thiz,
+                                                jint W_VO,
+                                                jint W_PG,
+                                                jint W_LN) {
     return W_VO + W_PG + W_LN;
 }
 
