@@ -230,8 +230,8 @@ Java_ua_nure_cbrnprotector_ui_RrhzCrit_RrhzCritViewModel_RrhzCritical(JNIEnv *en
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_Ehbrya_necessary(JNIEnv *env, jobject thiz, float R0) {
-    return (1 - R0) / 100;;
+Java_ua_nure_cbrnprotector_ui_EhbryaNec_EhbryaNecViewModel_EhbryaNecessary(JNIEnv *env, jobject thiz, float R0) {
+    return (1 - R0);
 }
 
 /*
@@ -249,9 +249,9 @@ Java_ua_nure_cbrnprotector_MainActivity_Ehbrya_necessary(JNIEnv *env, jobject th
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_Ehbrya_0(JNIEnv *env, jobject thiz, jfloat Rrhz_Critical,
+Java_ua_nure_cbrnprotector_ui_Ehbrya0_Ehbrya0ViewModel_Ehbrya0(JNIEnv *env, jobject thiz, jfloat Rrhz_Critical,
                                                  jfloat Rrhz) {
-    return 100 - (Rrhz_Critical / Rrhz) * 100;
+    return 1 - (Rrhz_Critical / Rrhz);
 }
 
 /*
@@ -283,12 +283,12 @@ Java_ua_nure_cbrnprotector_MainActivity_R_hbrya_rhz_och(JNIEnv *env, jobject thi
 
 */
 
-extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_W_VO(JNIEnv *env, jobject thiz,
-                                             jfloat w_phr,
-                                             jfloat w_rjk,
-                                             jfloat w0) {
-    return w_phr + w_rjk + w0;
+extern "C" JNIEXPORT jint JNICALL
+Java_ua_nure_cbrnprotector_ui_Wvo_WvoViewModel_WVO(JNIEnv *env, jobject thiz,
+                                             jint w_rhr,
+                                             jint w_rhk,
+                                             jint w0) {
+    return w_rhr + w_rhk + w0;
 }
 
 /*
@@ -297,12 +297,12 @@ Java_ua_nure_cbrnprotector_MainActivity_W_VO(JNIEnv *env, jobject thiz,
 
 */
 
-extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_W_PJ(JNIEnv *env, jobject thiz,
-                                             jfloat w_on,
-                                             jfloat w_zikz,
-                                             jfloat w_poz) {
-    return w_on + w_poz + w_zikz;
+extern "C" JNIEXPORT jint JNICALL
+Java_ua_nure_cbrnprotector_ui_Wpg_WpgViewModel_WPJ(JNIEnv *env, jobject thiz,
+                                             jint w_op,
+                                             jint w_zikz,
+                                             jint w_poz) {
+    return w_op + w_poz + w_zikz;
 }
 
 /*
@@ -311,12 +311,12 @@ Java_ua_nure_cbrnprotector_MainActivity_W_PJ(JNIEnv *env, jobject thiz,
 
 */
 
-extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_W_LN(JNIEnv *env, jobject thiz,
-                                             jfloat w_oc,
-                                             jfloat w_ovt,
-                                             jfloat w_m) {
-    return w_oc + w_ovt + w_m;
+extern "C" JNIEXPORT jint JNICALL
+Java_ua_nure_cbrnprotector_ui_Wln_WlnViewModel_WLN(JNIEnv *env, jobject thiz,
+                                             jint w_os,
+                                             jint w_ovt,
+                                             jint w_m) {
+    return w_os + w_ovt + w_m;
 }
 
 /*
@@ -325,13 +325,12 @@ Java_ua_nure_cbrnprotector_MainActivity_W_LN(JNIEnv *env, jobject thiz,
 
 */
 
-float W_HBRYA(float W_VO, float W_PG, float W_LN) { return W_VO + W_PG + W_LN; }
 
-extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_W_HBRYA(JNIEnv *env, jobject thiz,
-                                                jfloat W_VO,
-                                                jfloat W_PG,
-                                                jfloat W_LN) {
+extern "C" JNIEXPORT jint JNICALL
+Java_ua_nure_cbrnprotector_ui_Whbrya_WhbryaViewModel_WHBRYA(JNIEnv *env, jobject thiz,
+                                                jint W_VO,
+                                                jint W_PG,
+                                                jint W_LN) {
     return W_VO + W_PG + W_LN;
 }
 

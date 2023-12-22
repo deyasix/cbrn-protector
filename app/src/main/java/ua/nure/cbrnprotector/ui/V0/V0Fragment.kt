@@ -6,11 +6,11 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import ua.nure.cbrnprotector.R
 import ua.nure.cbrnprotector.base.BaseFragment
-import ua.nure.cbrnprotector.databinding.Fragment2EditTextBinding
+import ua.nure.cbrnprotector.databinding.Fragment2EditTextsBinding
 
 
 class V0Fragment :
-    BaseFragment<Fragment2EditTextBinding, V0ViewModel>(Fragment2EditTextBinding::inflate) {
+    BaseFragment<Fragment2EditTextsBinding, V0ViewModel>(Fragment2EditTextsBinding::inflate) {
     override val viewModel: V0ViewModel by viewModels()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

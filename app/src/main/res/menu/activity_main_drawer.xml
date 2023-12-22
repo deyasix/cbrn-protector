@@ -26,6 +26,24 @@
             android:id="@+id/nav_RrhzCrit"
             android:title="@string/navigation_RrhzCrit" />
         <item
+            android:id="@+id/nav_EhbryaNec"
+            android:title="@string/navigation_EhbryaNec" />
+        <item
+            android:id="@+id/nav_Ehbrya0"
+            android:title="@string/navigation_Ehbrya0" />
+        <item
+            android:id="@+id/nav_Whbrya"
+            android:title="@string/navigation_Whbrya" />
+        <item
+            android:id="@+id/nav_Wvo"
+            android:title="@string/navigation_Wvo" />
+        <item
+            android:id="@+id/nav_Wpg"
+            android:title="@string/navigation_Wpg" />
+        <item
+            android:id="@+id/nav_Wln"
+            android:title="@string/navigation_Wln" />
+        <item
             android:id="@+id/nav_Prhz"
             android:title="@string/navigation_Prhz" />
     </group>

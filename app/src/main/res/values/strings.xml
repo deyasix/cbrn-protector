@@ -5,9 +5,15 @@
     <string name="navigation_hostiles_indicator">Hostiles Indicator</string>
     <string name="navigation_v0">V0</string>
     <string name="navigation_En">En</string>
-    <string name="navigation_Rrhz">Rrhz</string>
-    <string name="navigation_RrhzCrit">Критичне Rrhz</string>
-    <string name="navigation_Prhz">Prhz</string>
+    <string name="navigation_Rrhz">Rрхз</string>
+    <string name="navigation_RrhzCrit">Критичне Rрхз</string>
+    <string name="navigation_EhbryaNec">Eхбря необхідне</string>
+    <string name="navigation_Ehbrya0">Eхбря нульове</string>
+    <string name="navigation_Whbrya">Wхбря</string>
+    <string name="navigation_Wvo">Wво</string>
+    <string name="navigation_Wpg">Wпж</string>
+    <string name="navigation_Wln">Wлн</string>
+    <string name="navigation_Prhz">Pрхз</string>
 
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>
@@ -41,9 +47,9 @@
     <string name="number_out_of_range">Некоректні дані. Ймовірність не може бути від\'ємною або більше одиниці.</string>
     <string name="Nivt_Nos_error">Загальна кількість особового складу не може бути менша за кількість особового складу військової частини, яка ймовірно втратить життя та здоров’я в умовах РХ зараження</string>
     <string name="R0_Rn_error">Імовірний ризик досягнення мети бойових дій не може бути меншим за допустимий ризик</string>
+    <string name="RrhzCrit_Rrhz_error">Ймовірний ризик досягнення мети бойових дій не може бути меншим за критичний ризик</string>
     <string name="Djirhz_Nirhz_error">Кожна кількість j-x загроз повинна бути вища за загальну кількість загроз на тій же позиції</string>
 
-    <string name="fragment_r0_title">Показник допустимого ризику досягнення мети бойових дій щодо втрати життя і здоров’я особового складу в умовах РХ зараження</string>
     <string name="fragment_r0_v0">Показник імовірності РХ зараження особового складу підрозділів</string>
     <string name="fragment_r0_p0">Показник максимально допустимої уразливості особового складу підрозділів в умовах РХ зараження</string>
 
@@ -55,14 +61,33 @@
     <string name="fragment_En_r0">Допустимий ризик досягнення мети бойових дій щодо n-го завдання системи ХБРЯ захисту</string>
     <string name="fragment_En_Rn">Імовірний ризик досягнення мети бойових дій до планування n-го завдання системи ХБРЯ захисту або очікуваний ризик досягнення мети бойових дій після планування n-го завдання системи ХБРЯ захисту</string>
 
-    <string name="fragment_Rrhz_title">Показник допустимого ризику досягнення мети бойових дій щодо втрати життя і здоров’я особового складу в умовах РХ зараження</string>
-    <string name="fragment_Rrhz_Prhz">Показник імовірності РХ зараження особового складу підрозділів</string>
-    <string name="fragment_Rrhz_Vrhz">Показник максимально допустимої уразливості особового складу підрозділів в умовах РХ зараження</string>
+    <string name="Rrhz">Показник ймовірного ризику досягнення мети бойових дій щодо втрати життя і здоров’я особового складу підрозділів в умовах РХ зараження</string>
+    <string name="Prhz">Показник імовірності РХ зараження особового складу підрозділів</string>
+    <string name="Vrhz">Показник уразливості особового складу підрозділів в умовах РХ зараження</string>
 
-    <string name="fragment_RrhzCrit_title">Показник критичного ризику досягнення мети бойових дій щодо втрати життя і здоров’я особового складу в умовах РХ зараження</string>
-    <string name="fragment_RrhzCrit_Rrhz">Показник ймовірного ризику досягнення мети бойових дій щодо втрати життя і здоров’я особового складу підрозділів в умовах РХ зараження</string>
-    <string name="fragment_RrhzCrit_R0">Показник допустимого ризику досягнення мети бойових дій щодо втрати життя і здоров’я особового складу в умовах РХ зараження</string>
+    <string name="R0">Показник допустимого ризику досягнення мети бойових дій щодо втрати життя і здоров’я особового складу в умовах РХ зараження</string>
 
+    <string name="RrhzCrit">Показник критичного ризику досягнення мети бойових дій щодо втрати життя і здоров’я особового складу в умовах РХ зараження</string>
+    <string name="fragment_EhbryaNec_title">Обчислення необхідної ефективності виконання заходів ХБРЯ захисту</string>
+
+    <string name="fragment_Ehbrya0_title">Обчислення ефективності виконання заходів ХБРЯ захисту військовими частинами без підрозділів РХБ захисту</string>
+
+    <string name="fragment_Whbrya_title">Визначення загального обсягу завдань відповідно до РХ загроз</string>
+    <string name="Wvo">Показник обсягу заходів щодо виявлення та оцінювання РХБ обстановки</string>
+    <string name="Wpg">Показник обсягу заходів щодо підтримання живучості військ в умовах РХ зараження</string>
+    <string name="Wln">Показник обсягу заходів щодо ліквідації наслідків РХ зараження</string>
+
+    <string name="fragment_Wvo_Wrhr">Показник обсягу РХ розвідки та спостереження</string>
+    <string name="fragment_Wvo_Wrhk">Показник обсягу РХ контролю</string>
+    <string name="fragment_Wwo_W0">Показник обсягу РХ контролю</string>
+
+    <string name="fragment_Wpg_Wop">Показник обсягу оповіщення про зміни в РХ обстановки</string>
+    <string name="fragment_Wpg_Wzikz">Показник обсягу застосування засобів індивідуального та колективного захисту</string>
+    <string name="fragment_Wpg_Wpoz">Показник обсягу режимно-обмежувальних заходів</string>
+
+    <string name="fragment_Wln_Wos">Показник обсягу оповіщення про зміни в РХ обстановки</string>
+    <string name="fragment_Wln_Wovt">Показник обсягу застосування засобів індивідуального та колективного захисту</string>
+    <string name="fragment_Wln_Wm">Показник обсягу режимно-обмежувальних заходів</string>
     <string name="fragment_Prhz_title">Показник імовірності РХ зараження особового складу підрозділів</string>
     <string name="fragment_Prhz_djirhz">Кількість j-х загроз РХ зараження і-ї військової частини за даними розвідки. Через кому</string>
     <string name="fragment_Prhz_nirhz">Загальна кількість визначених загроз, реалізація яких 100 % призведе до втрат особового складу і-ї військової частини в умовах РХ зараження. Через кому.</string>

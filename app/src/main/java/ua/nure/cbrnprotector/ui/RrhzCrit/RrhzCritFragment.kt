@@ -47,12 +47,12 @@ class RrhzCritFragment : BaseFragment<Fragment2PopupsBinding, RrhzCritViewModel>
 
     private fun init() {
         with(binding) {
-            tvTitle.text = getString(R.string.fragment_RrhzCrit_title)
+            tvTitle.text = getString(R.string.RrhzCrit)
             ppFirst.setConditionsList(Risk.entries)
             ppSecond.hint = getString(R.string.choose_probability)
             ppSecond.setConditionsList(Risk.entries)
-            tvFirst.text = getString(R.string.fragment_RrhzCrit_Rrhz)
-            tvSecond.text = getString(R.string.fragment_RrhzCrit_R0)
+            tvFirst.text = getString(R.string.Rrhz)
+            tvSecond.text = getString(R.string.R0)
         }
     }
 }

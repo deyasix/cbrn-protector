@@ -36,7 +36,14 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_hostiles_indicator,
                 R.id.nav_v0,
                 R.id.nav_En,
-                R.id.nav_Rrhz, R.id.nav_RrhzCrit
+                R.id.nav_Rrhz,
+                R.id.nav_RrhzCrit,
+                R.id.nav_EhbryaNec,
+                R.id.nav_Ehbrya0,
+                R.id.nav_Whbrya,
+                R.id.nav_Wvo,
+                R.id.nav_Wpg,
+                R.id.nav_Wln
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
