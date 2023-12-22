@@ -169,7 +169,7 @@ Java_ua_nure_cbrnprotector_ui_Prhz_PrhzViewModel_Prhz(JNIEnv *env, jobject /* th
 */
 
 extern "C" JNIEXPORT jint JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_N200(JNIEnv *env, jobject thiz, jintArray N_200_ios,
+Java_ua_nure_cbrnprotector_ui_Vrhz_VrhzViewModel_N200(JNIEnv *env, jobject thiz, jintArray N_200_ios,
                                              jint N_rhz) {
     jint *N_200_ios_ptr = env->GetIntArrayElements(N_200_ios, 0);
     jint sum200 = 0;
@@ -181,7 +181,7 @@ Java_ua_nure_cbrnprotector_MainActivity_N200(JNIEnv *env, jobject thiz, jintArra
 }
 
 extern "C" JNIEXPORT jint JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_N300(JNIEnv *env, jobject thiz, jintArray N_300_ios,
+Java_ua_nure_cbrnprotector_ui_Vrhz_VrhzViewModel_N300(JNIEnv *env, jobject thiz, jintArray N_300_ios,
                                              jint N_rhz) {
     jint *N_300_ios_ptr = env->GetIntArrayElements(N_300_ios, 0);
     jint sum300 = 0;
@@ -193,7 +193,7 @@ Java_ua_nure_cbrnprotector_MainActivity_N300(JNIEnv *env, jobject thiz, jintArra
 }
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_Vrhz(JNIEnv *env, jobject thiz, jint N200, jint N300,
+Java_ua_nure_cbrnprotector_ui_Vrhz_VrhzViewModel_Vrhz(JNIEnv *env, jobject thiz, jint N200, jint N300,
                                              jint N_oc) {
     return static_cast<float>(N200 + N300) / N_oc;
 }

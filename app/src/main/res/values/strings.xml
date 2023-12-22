@@ -14,6 +14,7 @@
     <string name="navigation_Wpg">Wпж</string>
     <string name="navigation_Wln">Wлн</string>
     <string name="navigation_Prhz">Pрхз</string>
+    <string name="navigation_Vrhz">Vрхз</string>
 
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>
@@ -49,6 +50,7 @@
     <string name="R0_Rn_error">Імовірний ризик досягнення мети бойових дій не може бути меншим за допустимий ризик</string>
     <string name="RrhzCrit_Rrhz_error">Ймовірний ризик досягнення мети бойових дій не може бути меншим за критичний ризик</string>
     <string name="Djirhz_Nirhz_error">Кожна кількість j-x загроз повинна бути вища за загальну кількість загроз на тій же позиції</string>
+    <string name="N200_N300_error">Загальна кількість особового складу повинна бути більша за суму можливих втрат</string>
 
     <string name="fragment_r0_v0">Показник імовірності РХ зараження особового складу підрозділів</string>
     <string name="fragment_r0_p0">Показник максимально допустимої уразливості особового складу підрозділів в умовах РХ зараження</string>
@@ -91,4 +93,9 @@
     <string name="fragment_Prhz_title">Показник імовірності РХ зараження особового складу підрозділів</string>
     <string name="fragment_Prhz_djirhz">Кількість j-х загроз РХ зараження і-ї військової частини за даними розвідки. Через кому</string>
     <string name="fragment_Prhz_nirhz">Загальна кількість визначених загроз, реалізація яких 100 % призведе до втрат особового складу і-ї військової частини в умовах РХ зараження. Через кому.</string>
+
+    <string name="fragment_vhrz_title">Показник максимально допустимої уразливості особового складу підрозділів в умовах РХ зараження.</string>
+    <string name="fragment_vhrz_N200">Можливі втрати життя особового складу і-ї військової частини в умовах РХ зараження. Через кому.</string>
+    <string name="fragment_vhrz_N300">Можливі втрати здоров’я особового складу і-ї військової частини в умовах РХ зараження. Через кому.</string>
+    <string name="fragment_vhrz_Nos">Загальна кількість особового складу</string>
 </resources>
