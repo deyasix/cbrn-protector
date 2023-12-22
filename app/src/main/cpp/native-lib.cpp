@@ -342,19 +342,17 @@ Java_ua_nure_cbrnprotector_MainActivity_W_HBRYA(JNIEnv *env, jobject thiz,
 
 */
 
-extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_N_j_i(JNIEnv *env, jobject thiz, jfloatArray w_i,
-                                              jfloatArray a_i, jint j) {
-    jfloat *w_i_ptr = env->GetFloatArrayElements(w_i, 0);
-    jfloat *a_i_ptr = env->GetFloatArrayElements(a_i, 0);
-    jfloat sum = 0.0;
-    for (int i = 0; i <= j; i++) {
-        sum += w_i_ptr[i];
+extern "C" JNIEXPORT jint JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_N_j_i(JNIEnv *env, jobject thiz, jintArray w_i, jintArray a_i, jint i_rhb) {
+    jint *w_i_ptr = env->GetIntArrayElements(w_i, 0);
+    jint *a_i_ptr = env->GetIntArrayElements(a_i, 0);
+    jint sum = 0;
+    for (int i = 0; i < i_rhb; i++) {
+        sum += w_i_ptr[i] / a_i_ptr[i];
     }
-    jfloat result = sum / a_i_ptr[j];
-    env->ReleaseFloatArrayElements(w_i, w_i_ptr, 0);
-    env->ReleaseFloatArrayElements(a_i, a_i_ptr, 0);
-    return result;
+    env->ReleaseIntArrayElements(w_i, w_i_ptr, 0);
+    env->ReleaseIntArrayElements(a_i, a_i_ptr, 0);
+    return sum;
 }
 
 /*
@@ -363,21 +361,32 @@ Java_ua_nure_cbrnprotector_MainActivity_N_j_i(JNIEnv *env, jobject thiz, jfloatA
 
 */
 
-extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_K_n(JNIEnv *env, jobject thiz, jfloatArray w_i,
-                                            jfloatArray a_i, jfloatArray N_i_um) {
-    jfloat *w_i_ptr = env->GetFloatArrayElements(w_i, 0);
-    jfloat *a_i_ptr = env->GetFloatArrayElements(a_i, 0);
-    jfloat *N_i_um_ptr = env->GetFloatArrayElements(N_i_um, 0);
-    jfloat K = 0.0;
+jint N_j_i(JNIEnv *env, jintArray w_i, jintArray a_i, jint i_rhb) {
+    jint *w_i_ptr = env->GetIntArrayElements(w_i, 0);
+    jint *a_i_ptr = env->GetIntArrayElements(a_i, 0);
+    jint sum = 0;
+    for (int i = 0; i < i_rhb; i++) {
+        sum += w_i_ptr[i] / a_i_ptr[i];
+    }
+    env->ReleaseIntArrayElements(w_i, w_i_ptr, 0);
+    env->ReleaseIntArrayElements(a_i, a_i_ptr, 0);
+    return sum;
+}
+
+extern "C" JNIEXPORT jint JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_K_n(JNIEnv *env, jobject thiz, jintArray w_i, jintArray a_i, jintArray N_i_um) {
+    jint *w_i_ptr = env->GetIntArrayElements(w_i, 0);
+    jint *a_i_ptr = env->GetIntArrayElements(a_i, 0);
+    jint *N_i_um_ptr = env->GetIntArrayElements(N_i_um, 0);
+    jint K = 0;
     int size = env->GetArrayLength(w_i);
     for (int i = 0; i < size; i++) {
-        jfloat N_i_j = Java_ua_nure_cbrnprotector_MainActivity_N_j_i(env, thiz, w_i, a_i, i);
+        jint N_i_j = N_j_i(env, w_i, a_i, i);
         K += N_i_j / N_i_um_ptr[i];
     }
-    env->ReleaseFloatArrayElements(w_i, w_i_ptr, 0);
-    env->ReleaseFloatArrayElements(a_i, a_i_ptr, 0);
-    env->ReleaseFloatArrayElements(N_i_um, N_i_um_ptr, 0);
+    env->ReleaseIntArrayElements(w_i, w_i_ptr, 0);
+    env->ReleaseIntArrayElements(a_i, a_i_ptr, 0);
+    env->ReleaseIntArrayElements(N_i_um, N_i_um_ptr, 0);
     return K;
 }
 
