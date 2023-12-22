@@ -49,5 +49,8 @@
         <item
             android:id="@+id/nav_Kn"
             android:title="@string/navigation_Kn" />
+        <item
+            android:id="@+id/nav_Vrhz"
+            android:title="@string/navigation_Vrhz" />
     </group>
 </menu>
