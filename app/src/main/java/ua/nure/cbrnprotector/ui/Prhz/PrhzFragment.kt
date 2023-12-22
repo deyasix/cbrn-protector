@@ -7,10 +7,10 @@ import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.viewModels
 import ua.nure.cbrnprotector.R
 import ua.nure.cbrnprotector.base.BaseFragment
-import ua.nure.cbrnprotector.databinding.Fragment2EditTextBinding
+import ua.nure.cbrnprotector.databinding.Fragment2EditTextsBinding
 
-class PrhzFragment : BaseFragment<Fragment2EditTextBinding, PrhzViewModel>(
-    Fragment2EditTextBinding::inflate
+class PrhzFragment : BaseFragment<Fragment2EditTextsBinding, PrhzViewModel>(
+    Fragment2EditTextsBinding::inflate
 ) {
     override val viewModel: PrhzViewModel by viewModels()
 
