@@ -298,11 +298,11 @@ Java_ua_nure_cbrnprotector_ui_Wvo_WvoViewModel_WVO(JNIEnv *env, jobject thiz,
 */
 
 extern "C" JNIEXPORT jint JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_W_PJ(JNIEnv *env, jobject thiz,
-                                             jint w_on,
+Java_ua_nure_cbrnprotector_ui_Wpg_WpgViewModel_WPJ(JNIEnv *env, jobject thiz,
+                                             jint w_op,
                                              jint w_zikz,
                                              jint w_poz) {
-    return w_on + w_poz + w_zikz;
+    return w_op + w_poz + w_zikz;
 }
 
 /*

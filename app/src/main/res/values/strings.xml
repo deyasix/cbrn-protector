@@ -11,6 +11,7 @@
     <string name="navigation_Ehbrya0">Eхбря нульове</string>
     <string name="navigation_Whbrya">Wхбря</string>
     <string name="navigation_Wvo">Wво</string>
+    <string name="navigation_Wpg">Wpg</string>
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>
     <string name="clear_data">Скинути дані</string>
@@ -75,4 +76,8 @@
     <string name="fragment_Wvo_Wrhr">Показник обсягу РХ розвідки та спостереження</string>
     <string name="fragment_Wvo_Wrhk">Показник обсягу РХ контролю</string>
     <string name="fragment_Wwo_W0">Показник обсягу РХ контролю</string>
+
+    <string name="fragment_Wpg_Wop">Показник обсягу оповіщення про зміни в РХ обстановки</string>
+    <string name="fragment_Wpg_Wzikz">Показник обсягу застосування засобів індивідуального та колективного захисту</string>
+    <string name="fragment_Wpg_Wpoz">Показник обсягу режимно-обмежувальних заходів</string>
 </resources>
