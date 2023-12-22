@@ -68,4 +68,9 @@
         android:name="ua.nure.cbrnprotector.ui.Wpg.WpgFragment"
         android:label="Wпж"
         tools:layout="@layout/fragment_3_edit_texts" />
+    <fragment
+        android:id="@+id/nav_Wln"
+        android:name="ua.nure.cbrnprotector.ui.Wln.WlnFragment"
+        android:label="Wлн"
+        tools:layout="@layout/fragment_3_edit_texts" />
 </navigation>

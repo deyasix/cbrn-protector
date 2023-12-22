@@ -41,7 +41,9 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_EhbryaNec,
                 R.id.nav_Ehbrya0,
                 R.id.nav_Whbrya,
-                R.id.nav_Wvo
+                R.id.nav_Wvo,
+                R.id.nav_Wpg,
+                R.id.nav_Wln
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
