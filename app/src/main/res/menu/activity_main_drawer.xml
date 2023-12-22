@@ -43,5 +43,8 @@
         <item
             android:id="@+id/nav_Wln"
             android:title="@string/navigation_Wln" />
+        <item
+            android:id="@+id/nav_Prhz"
+            android:title="@string/navigation_Prhz" />
     </group>
 </menu>

@@ -13,6 +13,8 @@
     <string name="navigation_Wvo">Wво</string>
     <string name="navigation_Wpg">Wпж</string>
     <string name="navigation_Wln">Wлн</string>
+    <string name="navigation_Prhz">Pрхз</string>
+
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>
     <string name="clear_data">Скинути дані</string>
@@ -46,6 +48,7 @@
     <string name="Nivt_Nos_error">Загальна кількість особового складу не може бути менша за кількість особового складу військової частини, яка ймовірно втратить життя та здоров’я в умовах РХ зараження</string>
     <string name="R0_Rn_error">Імовірний ризик досягнення мети бойових дій не може бути меншим за допустимий ризик</string>
     <string name="RrhzCrit_Rrhz_error">Ймовірний ризик досягнення мети бойових дій не може бути меншим за критичний ризик</string>
+    <string name="Djirhz_Nirhz_error">Кожна кількість j-x загроз повинна бути вища за загальну кількість загроз на тій же позиції</string>
 
     <string name="fragment_r0_v0">Показник імовірності РХ зараження особового складу підрозділів</string>
     <string name="fragment_r0_p0">Показник максимально допустимої уразливості особового складу підрозділів в умовах РХ зараження</string>
@@ -85,4 +88,7 @@
     <string name="fragment_Wln_Wos">Показник обсягу оповіщення про зміни в РХ обстановки</string>
     <string name="fragment_Wln_Wovt">Показник обсягу застосування засобів індивідуального та колективного захисту</string>
     <string name="fragment_Wln_Wm">Показник обсягу режимно-обмежувальних заходів</string>
+    <string name="fragment_Prhz_title">Показник імовірності РХ зараження особового складу підрозділів</string>
+    <string name="fragment_Prhz_djirhz">Кількість j-х загроз РХ зараження і-ї військової частини за даними розвідки. Через кому</string>
+    <string name="fragment_Prhz_nirhz">Загальна кількість визначених загроз, реалізація яких 100 % призведе до втрат особового складу і-ї військової частини в умовах РХ зараження. Через кому.</string>
 </resources>
