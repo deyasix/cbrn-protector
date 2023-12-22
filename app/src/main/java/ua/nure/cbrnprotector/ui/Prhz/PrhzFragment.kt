@@ -1,7 +1,6 @@
 package ua.nure.cbrnprotector.ui.Prhz
 
 import android.os.Bundle
-import android.text.InputType
 import android.view.View
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.viewModels
@@ -40,8 +39,6 @@ class PrhzFragment : BaseFragment<Fragment2EditTextsBinding, PrhzViewModel>(
 
     private fun init() {
         with(binding) {
-            etFirst.inputType = InputType.TYPE_CLASS_TEXT
-            etSecond.inputType = InputType.TYPE_CLASS_TEXT
             tvTitle.text = getString(R.string.fragment_Prhz_title)
             etFirst.hint = getString(R.string.et_hint)
             etSecond.hint = getString(R.string.et_hint)
@@ -52,7 +49,7 @@ class PrhzFragment : BaseFragment<Fragment2EditTextsBinding, PrhzViewModel>(
 
     override fun isValid(): Boolean {
         if (!viewModel.isValuesValid()) {
-            showErrorSnackBar(getString(R.string.Nivt_Nos_error))
+            showErrorSnackBar(getString(R.string.Djirhz_Nirhz_error))
             return false
         }
         return true

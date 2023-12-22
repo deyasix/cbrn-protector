@@ -27,7 +27,7 @@
         android:id="@+id/nav_v0"
         android:name="ua.nure.cbrnprotector.ui.V0.V0Fragment"
         android:label="V0"
-        tools:layout="@layout/fragment_2_edit_text" />
+        tools:layout="@layout/fragment_2_edit_texts" />
     <fragment
         android:id="@+id/nav_En"
         android:name="ua.nure.cbrnprotector.ui.En.EnFragment"
@@ -77,6 +77,12 @@
         android:id="@+id/nav_Prhz"
         android:name="ua.nure.cbrnprotector.ui.Prhz.PrhzFragment"
         android:label="Prhz"
+        tools:layout="@layout/fragment_2_edit_texts" />
+    <fragment
+        android:id="@+id/nav_Kn"
+        android:name="ua.nure.cbrnprotector.ui.Kn.KnFragment"
+        android:label="Kn"
+        tools:layout="@layout/fragment_3_edit_texts" />
         tools:layout="@layout/fragment_2_edit_text" />
     <fragment
         android:id="@+id/nav_Vrhz"
