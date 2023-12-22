@@ -131,7 +131,7 @@ Java_ua_nure_cbrnprotector_MainActivity_Pjirhz(JNIEnv *env, jobject /* this */, 
 
 extern "C"
 JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_Prhz(JNIEnv *env, jobject /* this */, jintArray D_j_irz,
+Java_ua_nure_cbrnprotector_ui_Prhz_PrhzViewModel_Prhz(JNIEnv *env, jobject /* this */, jintArray D_j_irz,
                                              jintArray n_irhz, jint N_rhz) {
     jfloat sum = 0;
     jboolean isCopy;
