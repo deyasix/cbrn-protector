@@ -34,7 +34,7 @@ class EhbryaNecFragment : BaseFragment<Fragment1PopupBinding, EhbryaNecViewModel
         with(binding) {
             tvTitle.text = getString(R.string.fragment_EhbryaNec_title)
             ppFirst.setConditionsList(Risk.entries)
-            tvFirst.text = getString(R.string.fragment_Ehbrya_R0)
+            tvFirst.text = getString(R.string.R0)
         }
     }
 }

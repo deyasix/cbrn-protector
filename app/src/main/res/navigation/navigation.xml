@@ -48,4 +48,9 @@
         android:name="ua.nure.cbrnprotector.ui.EhbryaNec.EhbryaNecFragment"
         android:label="Eхбря необхідне"
         tools:layout="@layout/fragment_2_popups" />
+    <fragment
+        android:id="@+id/nav_Ehbrya0"
+        android:name="ua.nure.cbrnprotector.ui.Ehbrya0.Ehbrya0Fragment"
+        android:label="Eхбря нульове"
+        tools:layout="@layout/fragment_2_popups" />
 </navigation>

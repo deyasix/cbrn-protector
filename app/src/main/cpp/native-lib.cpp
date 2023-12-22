@@ -249,9 +249,9 @@ Java_ua_nure_cbrnprotector_ui_EhbryaNec_EhbryaNecViewModel_EhbryaNecessary(JNIEn
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_Ehbrya_0(JNIEnv *env, jobject thiz, jfloat Rrhz_Critical,
+Java_ua_nure_cbrnprotector_ui_Ehbrya0_Ehbrya0ViewModel_Ehbrya0(JNIEnv *env, jobject thiz, jfloat Rrhz_Critical,
                                                  jfloat Rrhz) {
-    return 100 - (Rrhz_Critical / Rrhz) * 100;
+    return 1 - (Rrhz_Critical / Rrhz);
 }
 
 /*
