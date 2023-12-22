@@ -7,6 +7,7 @@
     <string name="navigation_En">En</string>
     <string name="navigation_Rrhz">Rrhz</string>
     <string name="navigation_RrhzCrit">Критичне Rrhz</string>
+    <string name="navigation_EhbryaNec">Eхбря необхідне</string>
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>
     <string name="clear_data">Скинути дані</string>
@@ -60,4 +61,7 @@
     <string name="fragment_RrhzCrit_Rrhz">Показник ймовірного ризику досягнення мети бойових дій щодо втрати життя і здоров’я особового складу підрозділів в умовах РХ зараження</string>
     <string name="fragment_RrhzCrit_R0">Показник допустимого ризику досягнення мети бойових дій щодо втрати життя і здоров’я особового складу в умовах РХ зараження</string>
 
+
+    <string name="fragment_EhbryaNec_title">Обчислення необхідної ефективності виконання заходів ХБРЯ захисту</string>
+    <string name="fragment_Ehbrya_R0">Показник допустимого ризику досягнення мети бойових дій щодо втрати життя і здоров’я особового складу в умовах РХ зараження</string>
 </resources>

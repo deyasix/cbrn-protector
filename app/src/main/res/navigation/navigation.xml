@@ -43,5 +43,9 @@
         android:name="ua.nure.cbrnprotector.ui.RrhzCrit.RrhzCritFragment"
         android:label="RrhzCrit"
         tools:layout="@layout/fragment_2_popups" />
-
+    <fragment
+        android:id="@+id/nav_EhbryaNec"
+        android:name="ua.nure.cbrnprotector.ui.EhbryaNec.EhbryaNecFragment"
+        android:label="Eхбря необхідне"
+        tools:layout="@layout/fragment_2_popups" />
 </navigation>
