@@ -284,11 +284,11 @@ Java_ua_nure_cbrnprotector_MainActivity_R_hbrya_rhz_och(JNIEnv *env, jobject thi
 */
 
 extern "C" JNIEXPORT jint JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_W_VO(JNIEnv *env, jobject thiz,
-                                             jint w_phr,
-                                             jint w_rjk,
+Java_ua_nure_cbrnprotector_ui_Wvo_WvoViewModel_WVO(JNIEnv *env, jobject thiz,
+                                             jint w_rhr,
+                                             jint w_rhk,
                                              jint w0) {
-    return w_phr + w_rjk + w0;
+    return w_rhr + w_rhk + w0;
 }
 
 /*

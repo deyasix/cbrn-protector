@@ -10,6 +10,7 @@
     <string name="navigation_EhbryaNec">Eхбря необхідне</string>
     <string name="navigation_Ehbrya0">Eхбря нульове</string>
     <string name="navigation_Whbrya">Wхбря</string>
+    <string name="navigation_Wvo">Wво</string>
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>
     <string name="clear_data">Скинути дані</string>
@@ -70,4 +71,8 @@
     <string name="Wvo">Показник обсягу заходів щодо виявлення та оцінювання РХБ обстановки</string>
     <string name="Wpg">Показник обсягу заходів щодо підтримання живучості військ в умовах РХ зараження</string>
     <string name="Wln">Показник обсягу заходів щодо ліквідації наслідків РХ зараження</string>
+
+    <string name="fragment_Wvo_Wrhr">Показник обсягу РХ розвідки та спостереження</string>
+    <string name="fragment_Wvo_Wrhk">Показник обсягу РХ контролю</string>
+    <string name="fragment_Wwo_W0">Показник обсягу РХ контролю</string>
 </resources>
