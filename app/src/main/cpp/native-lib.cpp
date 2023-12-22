@@ -1,5 +1,6 @@
 #include <jni.h>
 #include <vector>
+#include <cmath>
 
 //-----------------------------1----------------------------------
 
@@ -417,7 +418,7 @@ Java_ua_nure_cbrnprotector_MainActivity_Ehbrya(JNIEnv *env, jobject thiz,
 
 /*
 
-  Сторінка 11. Пункт 2.9. Формула 24.
+  Сторінка 11. Пункт 2.10. Формула 25.
 
 */
 
@@ -427,3 +428,145 @@ Java_ua_nure_cbrnprotector_MainActivity_V_hbrya_rhz_on(JNIEnv *env, jobject thiz
                                                        jfloat N_oc) {
     return N_yr / N_oc;
 }
+
+/*
+
+  Сторінка 11. Пункт 3. Формула 26
+
+*/
+
+extern "C" JNIEXPORT jfloat JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_R0_modified(JNIEnv *env, jobject thiz,
+                                                       jfloat P0,
+                                                       jfloat V0) {
+    return P0*V0;
+}
+
+/*
+
+  Сторінка 11. Пункт 3. Формула 27
+
+*/
+
+extern "C" JNIEXPORT jint JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_V0_modified(JNIEnv *env, jobject thiz, jintArray N_iv_0, jint N_ob) {
+    jint *N_iv_0_ptr = env->GetIntArrayElements(N_iv_0, 0);
+    jint sum = 0;
+    int size = env->GetArrayLength(N_iv_0);
+    for (int i = 0; i < size; i++) {
+        sum += N_iv_0_ptr[i];
+    }
+    env->ReleaseIntArrayElements(N_iv_0, N_iv_0_ptr, 0);
+    return sum / N_ob;
+}
+
+/*
+
+  Сторінка 11. Пункт 3.1. Формула 28
+
+*/
+
+extern "C" JNIEXPORT jfloat JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_Rv(JNIEnv *env, jobject thiz,
+                                                    jfloat Pv,
+                                                    jfloat Vv) {
+    return Pv*Vv;
+}
+
+/*
+
+  Сторінка 11. Пункт 3.1.1. Формула 29, 30
+
+*/
+
+jfloat P_j_iv(jint D_j_iv, jint n_iv) {
+    return static_cast<float>(D_j_iv) / n_iv;
+}
+
+extern "C" JNIEXPORT jfloat JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_Pv(JNIEnv *env, jobject thiz, jintArray D_j_iv, jintArray n_irhz, jint Nv) {
+    jint *D_j_iv_ptr = env->GetIntArrayElements(D_j_iv, 0);
+    jint *n_irhz_ptr = env->GetIntArrayElements(n_irhz, 0);
+    jfloat sum = 0.0;
+    for (int i = 0; i < Nv; i++) {
+        sum += P_j_iv(D_j_iv_ptr[i], n_irhz_ptr[i]);
+    }
+    env->ReleaseIntArrayElements(D_j_iv, D_j_iv_ptr, 0);
+    env->ReleaseIntArrayElements(n_irhz, n_irhz_ptr, 0);
+    return sum / Nv;
+}
+
+/*
+
+  Сторінка 13. Пункт 3.1.2. Формула 31
+
+*/
+
+extern "C" JNIEXPORT jfloat JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_Vv(JNIEnv *env, jobject thiz, jintArray N_iv, jint N_ob) {
+    jint *N_iv_ptr = env->GetIntArrayElements(N_iv, 0);
+    jfloat sum = 0.0;
+    int size = env->GetArrayLength(N_iv);
+    for (int i = 0; i < size; i++) {
+        sum += N_iv_ptr[i];
+    }
+    env->ReleaseIntArrayElements(N_iv, N_iv_ptr, 0);
+    return sum / N_ob;
+}
+
+/*
+
+  Сторінка 14. Пункт 3.1.2. Формула 32
+
+*/
+
+extern "C" JNIEXPORT jfloat JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_K_iob(JNIEnv *env, jobject thiz,
+                                           jfloat L_if,
+                                           jfloat L_iob) {
+    return std::abs(L_if - L_iob) / std::max(L_if, L_iob);
+}
+
+/*
+
+  Сторінка 14. Пункт 3.1.3. Формула 33
+
+*/
+
+extern "C" JNIEXPORT jfloat JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_Rv_critical(JNIEnv *env, jobject thiz,
+                                              jfloat Rv,
+                                              jfloat R0) {
+    return Rv - R0;
+}
+
+/*
+
+  Сторінка 14. Пункт 3.1.3. Формула 34
+
+*/
+
+extern "C" JNIEXPORT jfloat JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_E_neo_am(JNIEnv *env, jobject thiz,
+                                                    jfloat R0) {
+    return 1 - R0;
+}
+
+/*
+
+  Сторінка 14. Пункт 3.1.3. Формула 35
+
+*/
+
+extern "C" JNIEXPORT jfloat JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_E_0_am(JNIEnv *env, jobject thiz,
+                                                 jfloat Rv_critical,
+                                                 float Rv) {
+    return 1 - (Rv_critical/Rv);
+}
+
+/*
+
+  Сторінка 14. Пункт 3.2 Формула 35
+
+*/
