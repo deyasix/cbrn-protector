@@ -374,7 +374,7 @@ jint N_j_i(JNIEnv *env, jintArray w_i, jintArray a_i, jint i_rhb) {
 }
 
 extern "C" JNIEXPORT jint JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_K_n(JNIEnv *env, jobject thiz, jintArray w_i, jintArray a_i,
+Java_ua_nure_cbrnprotector_ui_Kn_KnViewModel_Kn(JNIEnv *env, jobject thiz, jintArray w_i, jintArray a_i,
                                             jintArray N_i_um) {
     jint *w_i_ptr = env->GetIntArrayElements(w_i, 0);
     jint *a_i_ptr = env->GetIntArrayElements(a_i, 0);
