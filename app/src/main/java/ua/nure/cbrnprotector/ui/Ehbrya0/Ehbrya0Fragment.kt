@@ -1,4 +1,4 @@
-package ua.nure.cbrnprotector.ui.Rrhz
+package ua.nure.cbrnprotector.ui.Ehbrya0
 
 import android.os.Bundle
 import android.view.View
@@ -8,10 +8,10 @@ import ua.nure.cbrnprotector.base.BaseFragment
 import ua.nure.cbrnprotector.databinding.Fragment2PopupsBinding
 import ua.nure.cbrnprotector.domain.Risk
 
-class RrhzFragment : BaseFragment<Fragment2PopupsBinding, RrhzViewModel>(
+class Ehbrya0Fragment : BaseFragment<Fragment2PopupsBinding, Ehbrya0ViewModel>(
     Fragment2PopupsBinding::inflate
 ) {
-    override val viewModel: RrhzViewModel by viewModels()
+    override val viewModel: Ehbrya0ViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -20,31 +20,40 @@ class RrhzFragment : BaseFragment<Fragment2PopupsBinding, RrhzViewModel>(
         setResultLogic(binding.btnCalculate, binding.tvResult, binding.btnClearData)
     }
 
+    override fun isValid(): Boolean {
+        if (!viewModel.isValuesValid()) {
+            showErrorSnackBar(getString(R.string.RrhzCrit_Rrhz_error))
+            return false
+        }
+        return true
+    }
+
     private fun setListeners() {
         with(binding) {
             ppFirst.onItemSelected = {
-                viewModel.setPrhz(it.value)
+                viewModel.setRrhzCrit(it.value)
             }
             ppSecond.onItemSelected = {
-                viewModel.setVrhz(it.value)
+                viewModel.setRrhz(it.value)
             }
-            viewModel.PrhzState.observe(viewLifecycleOwner) {
+            viewModel.RrhzCritState.observe(viewLifecycleOwner) {
                 if (it == null) ppFirst.clearData()
             }
-            viewModel.VrhzState.observe(viewLifecycleOwner) {
+            viewModel.RrhzState.observe(viewLifecycleOwner) {
                 if (it == null) ppSecond.clearData()
             }
+
         }
     }
 
     private fun init() {
         with(binding) {
-            tvTitle.text = getString(R.string.Rrhz)
+            tvTitle.text = getString(R.string.fragment_Ehbrya0_title)
             ppFirst.setConditionsList(Risk.entries)
             ppSecond.hint = getString(R.string.choose_probability)
             ppSecond.setConditionsList(Risk.entries)
-            tvFirst.text = getString(R.string.Prhz)
-            tvSecond.text = getString(R.string.Vrhz)
+            tvFirst.text = getString(R.string.RrhzCrit)
+            tvSecond.text = getString(R.string.Rrhz)
         }
     }
 }

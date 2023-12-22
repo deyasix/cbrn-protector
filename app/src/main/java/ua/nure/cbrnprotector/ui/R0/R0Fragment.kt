@@ -40,7 +40,7 @@ class R0Fragment :
 
     private fun init() {
         with(binding) {
-            tvTitle.text = getString(R.string.fragment_r0_title)
+            tvTitle.text = getString(R.string.R0)
             ppFirst.setConditionsList(Risk.entries)
             ppSecond.hint = getString(R.string.choose_probability)
             ppSecond.setConditionsList(Risk.entries)

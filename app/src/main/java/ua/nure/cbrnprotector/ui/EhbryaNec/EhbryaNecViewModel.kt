@@ -1,7 +1,6 @@
 package ua.nure.cbrnprotector.ui.EhbryaNec
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.*
 import ua.nure.cbrnprotector.base.BaseViewModel
 import ua.nure.cbrnprotector.domain.ColoredValuable
 import ua.nure.cbrnprotector.domain.Risk
