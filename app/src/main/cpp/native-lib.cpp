@@ -458,8 +458,8 @@ Java_ua_nure_cbrnprotector_MainActivity_R0_modified(JNIEnv *env, jobject thiz,
 
 */
 
-extern "C" JNIEXPORT jint JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_V0_modified(JNIEnv *env, jobject thiz, jintArray N_iv_0,
+extern "C" JNIEXPORT jfloat JNICALL
+Java_ua_nure_cbrnprotector_ui_V0Mod_V0ModViewModel_V0Mod(JNIEnv *env, jobject thiz, jintArray N_iv_0,
                                                     jint N_ob) {
     jint *N_iv_0_ptr = env->GetIntArrayElements(N_iv_0, 0);
     jint sum = 0;
