@@ -128,4 +128,9 @@
         android:name="ua.nure.cbrnprotector.ui.R0mod.R0ModFragment"
         android:label="@string/navigation_R0_mod"
         tools:layout="@layout/fragment_2_popups" />
+    <fragment
+        android:id="@+id/nav_Kiob"
+        android:name="ua.nure.cbrnprotector.ui.Kiob.KiobFragment"
+        android:label="@string/navigation_Kiob"
+        tools:layout="@layout/fragment_2_edit_texts" />
 </navigation>

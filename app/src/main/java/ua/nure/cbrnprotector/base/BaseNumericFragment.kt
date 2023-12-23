@@ -34,7 +34,8 @@ abstract class BaseNumericFragment<VBinding : ViewBinding, VM : BaseViewModel>(
                             )
                         )
                     }
-                    resultView.text = result.value.toInt().toString()
+                    val text = if (result.value % 1f == 0f) result.value.toInt() else result.value
+                    resultView.text = text.toString()
                     val color = context?.getColor(result.color)
                     color?.let {
                         resultView.backgroundTintList = ColorStateList.valueOf(color)

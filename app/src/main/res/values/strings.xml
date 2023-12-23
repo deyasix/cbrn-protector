@@ -20,11 +20,12 @@
     <string name="navigation_Ehbrya">Eхбря</string>
     <string name="navigation_V0Mod">V0 мод</string>
     <string name="navigation_Rv">Rв</string>
-    <string name="navigation_Vhbrya_rhz_op">V ХБРЯ_рхз_оп</string>
+    <string name="navigation_Vhbrya_rhz_op">V ХБРЯ рхз оп</string>
     <string name="navigation_Pv">Pв</string>
     <string name="navigation_Vv">Vв</string>
     <string name="navigation_RV">RV</string>
     <string name="navigation_R0_mod">R0 мод</string>
+    <string name="navigation_Kiob">Kіоб</string>
 
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>
@@ -152,4 +153,8 @@
     <string name="fragment_Vv_title">Обчислення значення показника ймовірності виявлення об’єктів противником</string>
     <string name="fragment_Vv_Niv">Кількість і-х об’єктів по яким реалізовані загрози виявлення. Через кому.</string>
     <string name="fragment_Vv_Nob">Загальна кількість об’єктів</string>
+
+    <string name="fragment_Kiob_title">Контраст яскравості об’єкту</string>
+    <string name="fragment_Kiob_Lif">Яскравість фона об’єкту</string>
+    <string name="fragment_Kiob_Liob">Яскравість об’єкту</string>
 </resources>
