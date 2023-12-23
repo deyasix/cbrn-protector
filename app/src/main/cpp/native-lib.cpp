@@ -420,10 +420,10 @@ Java_ua_nure_cbrnprotector_ui_Cn_CnViewModel_Cn(JNIEnv *env, jobject thiz, jintA
 
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_Ehbrya(JNIEnv *env, jobject thiz,
+Java_ua_nure_cbrnprotector_ui_Ehbrya_EhbryaViewModel_Ehbrya(JNIEnv *env, jobject thiz,
                                                jfloat Rrhz_och_Critical,
                                                jfloat Rrhz_och) {
-    return 100 - (Rrhz_och_Critical / Rrhz_och) * 100;
+    return Rrhz_och_Critical / Rrhz_och;
 }
 
 /*

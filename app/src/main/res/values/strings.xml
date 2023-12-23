@@ -17,6 +17,7 @@
     <string name="navigation_Kn">Kn</string>
     <string name="navigation_Vrhz">Vрхз</string>
     <string name="navigation_Cn">Cn</string>
+    <string name="navigation_Ehbrya">Eхбря</string>
 
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>
@@ -112,4 +113,8 @@
     <string name="fragment_Cn_title">Вартість варіанту дій за складом сил і засобів Б(Р)ТГр РХБ захисту</string>
     <string name="fragment_Cn_Ci">Вартість одного засобу РХБ захисту і-го типу. Через кому.</string>
     <string name="fragment_Cn_Ni">Загальна кількість засобів РХБ захисту і-го типу. Через кому</string>
+
+    <string name="fragment_Ehbrya_title">Вартість варіанту дій за складом сил і засобів Б(Р)ТГр РХБ захисту</string>
+    <string name="fragment_Ehbrya_RrhzCritOch">Показник очікуваного критичного ризику досягнення мети бойових дій щодо втрати життя і здоров’я особового складу підрозділів в умовах РХ зараження після планування заходів ХБРЯ захисту</string>
+    <string name="fragment_Ehbrya_RrhzOch">Показник очікуваного ймовірного ризику досягнення мети бойових дій щодо втрати життя і здоров’я особового складу підрозділів в умовах РХ зараження</string>
 </resources>
