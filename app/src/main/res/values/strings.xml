@@ -25,6 +25,7 @@
     <string name="navigation_Vv">Vв</string>
     <string name="navigation_RV">RV</string>
     <string name="navigation_R0_mod">R0 мод</string>
+    <string name="navigation_RV_crit">R_v_critical</string>
 
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>
@@ -67,6 +68,7 @@
     <string name="Nur_Nos_error">Загальна кількість особового складу повинна бути більша за кількість ураженого особового складу</string>
     <string name="Pv_error">Довжини масивів повинні бути однакового розміру. Кожна і-та сума кількості j-х загроз повинна бути не менша за кожну загальну кількість визначених загроз.</string>
     <string name="Niv_Nob_error">Сума кількості об\'єктів не може бути більша за загальну кількість об\'єктів.</string>
+    <string name="Rv_R0_error">Імовірність виявлення об\'єктів противником має бутит більша за показник допустимого ризику</string>
 
     <string name="fragment_r0_v0">Показник імовірності РХ зараження особового складу підрозділів</string>
     <string name="fragment_r0_p0">Показник максимально допустимої уразливості особового складу підрозділів в умовах РХ зараження</string>
@@ -143,6 +145,10 @@
     <string name="fragment_RV_title">Показник ймовірного ризику досягнення мети бойових дій щодо виявлення об’єктів противником для ураження</string>
     <string name="fragment_RV_PV">Показник імовірності виявлення об’єктів</string>
     <string name="fragment_RV_VV">Показник частки можливого виявлення противником об’єктів для ураження</string>
+
+    <string name="fragment_RV_crit_title">Показник критичного ризику досягнення мети бойових дій щодо виявлення противником об’єктів для ураження</string>
+    <string name="fragment_RV_crit_RV">Імовірність виявлення об’єктів противником</string>
+    <string name="fragment_RV_crit_R0">Показник допустимого ризику досягнення мети бойових дій щодо виявлення об’єктів противником для ураження</string>
 
     <string name="fragment_Pv_title">Обчислення значення показника ймовірності виявлення об’єктів противником</string>
     <string name="fragment_Pv_Djiv">Сума кількості кількість j-х загроз виявлення і-го об’єкту за даними розвідки. Через кому</string>

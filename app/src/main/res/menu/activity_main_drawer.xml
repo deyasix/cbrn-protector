@@ -76,5 +76,8 @@
         <item
             android:id="@+id/nav_R0_mod"
             android:title="@string/navigation_R0_mod" />
+        <item
+            android:id="@+id/nav_RV_crit"
+            android:title="@string/navigation_RV_crit" />
     </group>
 </menu>
