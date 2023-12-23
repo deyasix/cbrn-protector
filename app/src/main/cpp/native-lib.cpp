@@ -433,10 +433,10 @@ Java_ua_nure_cbrnprotector_ui_Ehbrya_EhbryaViewModel_Ehbrya(JNIEnv *env, jobject
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_V_hbrya_rhz_on(JNIEnv *env, jobject thiz,
-                                                       jfloat N_yr,
-                                                       jfloat N_oc) {
-    return N_yr / N_oc;
+Java_ua_nure_cbrnprotector_ui_Vhbrya_1rhz_1op_VhbryaRhzOpViewModel_VhbryaRhzOp(JNIEnv *env, jobject thiz,
+                                                                               jint N_yr,
+                                                                               jint N_oc) {
+    return static_cast<float>(N_yr) / N_oc;
 }
 
 /*
@@ -478,7 +478,7 @@ Java_ua_nure_cbrnprotector_ui_V0Mod_V0ModViewModel_V0Mod(JNIEnv *env, jobject th
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_ui_RV_RVViewModel_Rv(JNIEnv *env, jobject thiz,
+Java_ua_nure_cbrnprotector_ui_Rv_RvViewModel_Rv(JNIEnv *env, jobject thiz,
                                            jfloat Pv,
                                            jfloat Vv) {
     return Pv * Vv;
@@ -495,7 +495,7 @@ jfloat P_j_iv(jint D_j_iv, jint n_iv) {
 }
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_Pv(JNIEnv *env, jobject thiz, jintArray D_j_iv,
+Java_ua_nure_cbrnprotector_ui_Pv_PvViewModel_Pv(JNIEnv *env, jobject thiz, jintArray D_j_iv,
                                            jintArray n_irhz, jint Nv) {
     jint *D_j_iv_ptr = env->GetIntArrayElements(D_j_iv, 0);
     jint *n_irhz_ptr = env->GetIntArrayElements(n_irhz, 0);
