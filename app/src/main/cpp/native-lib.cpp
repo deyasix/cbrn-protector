@@ -533,7 +533,7 @@ Java_ua_nure_cbrnprotector_ui_Vv_VvViewModel_Vv(JNIEnv *env, jobject thiz, jintA
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_K_iob(JNIEnv *env, jobject thiz,
+Java_ua_nure_cbrnprotector_ui_Kiob_KiobViewModel_Kiob(JNIEnv *env, jobject thiz,
                                               jfloat L_if,
                                               jfloat L_iob) {
     return std::abs(L_if - L_iob) / std::max(L_if, L_iob);
