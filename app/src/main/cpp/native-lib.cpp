@@ -420,10 +420,10 @@ Java_ua_nure_cbrnprotector_ui_Cn_CnViewModel_Cn(JNIEnv *env, jobject thiz, jintA
 
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_Ehbrya(JNIEnv *env, jobject thiz,
+Java_ua_nure_cbrnprotector_ui_Ehbrya_EhbryaViewModel_Ehbrya(JNIEnv *env, jobject thiz,
                                                jfloat Rrhz_och_Critical,
                                                jfloat Rrhz_och) {
-    return 100 - (Rrhz_och_Critical / Rrhz_och) * 100;
+    return Rrhz_och_Critical / Rrhz_och;
 }
 
 /*
@@ -458,8 +458,8 @@ Java_ua_nure_cbrnprotector_MainActivity_R0_modified(JNIEnv *env, jobject thiz,
 
 */
 
-extern "C" JNIEXPORT jint JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_V0_modified(JNIEnv *env, jobject thiz, jintArray N_iv_0,
+extern "C" JNIEXPORT jfloat JNICALL
+Java_ua_nure_cbrnprotector_ui_V0Mod_V0ModViewModel_V0Mod(JNIEnv *env, jobject thiz, jintArray N_iv_0,
                                                     jint N_ob) {
     jint *N_iv_0_ptr = env->GetIntArrayElements(N_iv_0, 0);
     jint sum = 0;
@@ -468,7 +468,7 @@ Java_ua_nure_cbrnprotector_MainActivity_V0_modified(JNIEnv *env, jobject thiz, j
         sum += N_iv_0_ptr[i];
     }
     env->ReleaseIntArrayElements(N_iv_0, N_iv_0_ptr, 0);
-    return sum / N_ob;
+    return static_cast<float>(sum) / N_ob;
 }
 
 /*
@@ -478,7 +478,7 @@ Java_ua_nure_cbrnprotector_MainActivity_V0_modified(JNIEnv *env, jobject thiz, j
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_Rv(JNIEnv *env, jobject thiz,
+Java_ua_nure_cbrnprotector_ui_RV_RVViewModel_Rv(JNIEnv *env, jobject thiz,
                                            jfloat Pv,
                                            jfloat Vv) {
     return Pv * Vv;

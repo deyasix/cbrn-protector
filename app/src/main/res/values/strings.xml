@@ -17,6 +17,9 @@
     <string name="navigation_Kn">Kn</string>
     <string name="navigation_Vrhz">Vрхз</string>
     <string name="navigation_Cn">Cn</string>
+    <string name="navigation_Ehbrya">Eхбря</string>
+    <string name="navigation_V0Mod">V0 мод</string>
+    <string name="navigation_RV">RV</string>
     <string name="navigation_Vhbrya_rhz_op">V ХБРЯ_рхз_оп</string>
 
     <string name="navigation_header_title">Menu</string>
@@ -56,6 +59,7 @@
     <string name="Kn_error">Довжини масивів повинні бути однакового розміру. Кожна і-та сума показників обсягу заходу повинна бути не менша за кожну можливість і-го типу засобу РХБ захисту. Кожна i-та кількість озброєння і засобів РХБ захисту повинна бути не більшою за результат ділення і-тої суми показників обсягу заходу та можливість і-го типу засобу.</string>
     <string name="N200_N300_error">Загальна кількість особового складу повинна бути більша за суму можливих втрат</string>
     <string name="Cn_error">Довжини масивів повинні бути однакового розміру.</string>
+    <string name="N0iv_Nob_error">Сума кількості об\'єктів, які можливо будуть виявлені противником, не може бути більшою за загальну кількість об\'єктів</string>
     <string name="Nur_Nos_error">Загальна кількість особового складу повинна бути більша за кількість ураженого особового складу</string>
 
 
@@ -118,4 +122,16 @@
     <string name="fragment_Cn_title">Вартість варіанту дій за складом сил і засобів Б(Р)ТГр РХБ захисту</string>
     <string name="fragment_Cn_Ci">Вартість одного засобу РХБ захисту і-го типу. Через кому.</string>
     <string name="fragment_Cn_Ni">Загальна кількість засобів РХБ захисту і-го типу. Через кому</string>
+
+    <string name="fragment_Ehbrya_title">Вартість варіанту дій за складом сил і засобів Б(Р)ТГр РХБ захисту</string>
+    <string name="fragment_Ehbrya_RrhzCritOch">Показник очікуваного критичного ризику досягнення мети бойових дій щодо втрати життя і здоров’я особового складу підрозділів в умовах РХ зараження після планування заходів ХБРЯ захисту</string>
+    <string name="fragment_Ehbrya_RrhzOch">Показник очікуваного ймовірного ризику досягнення мети бойових дій щодо втрати життя і здоров’я особового складу підрозділів в умовах РХ зараження</string>
+
+    <string name="fragment_V0Mod_title">Показник максимально допустимої частки можливого виявлення об’єктів противником для ураження</string>
+    <string name="fragment_V0Mod_N0iv">Кількість i-х об’єктів , які можливо будуть виявлені противником. Через кому.</string>
+    <string name="fragment_V0Mod_Nob">Загальна кількість об’єктів</string>
+
+    <string name="fragment_RV_title">Показник ймовірного ризику досягнення мети бойових дій щодо виявлення об’єктів противником для ураження</string>
+    <string name="fragment_RV_PV">Показник імовірності виявлення об’єктів</string>
+    <string name="fragment_RV_VV">Показник частки можливого виявлення противником об’єктів для ураження</string>
 </resources>

@@ -56,6 +56,15 @@
             android:id="@+id/nav_Cn"
             android:title="@string/navigation_Cn" />
         <item
+            android:id="@+id/nav_Ehbrya"
+            android:title="@string/navigation_Ehbrya" />
+        <item
+            android:id="@+id/nav_V0Mod"
+            android:title="@string/navigation_V0Mod" />
+        <item
+            android:id="@+id/nav_RV"
+            android:title="@string/navigation_RV" />
+        <item
             android:id="@+id/nav_Vhbrya_Rhz_Op"
             android:title="@string/navigation_Vhbrya_rhz_op" />
     </group>
