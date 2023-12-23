@@ -580,7 +580,7 @@ Java_ua_nure_cbrnprotector_MainActivity_E_0_am(JNIEnv *env, jobject thiz,
 
 /*
 
-  Сторінка 14. Пункт 3.2 Формула 36
+  Сторінка 14. Пункт 3.2 Формула 36-38
 
   Вимоги:
   1. Розмір масиву D_j_iv повинен бути такий самий як розмір масиву nzv
@@ -613,4 +613,148 @@ Java_ua_nure_cbrnprotector_MainActivity_P_v_AM(JNIEnv *env, jobject thiz, jintAr
     env->ReleaseIntArrayElements(D_j_iv, D_j_iv_ptr, 0);
     env->ReleaseIntArrayElements(nzv, nzv_ptr, 0);
     return sum / (N_v + n * N_h_v);
+}
+
+/*
+
+  Сторінка 15. Пункт 3.2.1. Формула 39
+
+*/
+
+extern "C" JNIEXPORT jfloat JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_K_iob_modified(JNIEnv *env, jobject thiz,
+                                                       jfloat L_if,
+                                                       jfloat L_iob,
+                                                       jfloat L_az,
+                                                       jfloat t_az) {
+    return std::abs(L_if - L_iob) / (std::max(L_if, L_iob) + (L_az / t_az));
+}
+
+/*
+
+  Сторінка 15. Пункт 3.2.2. Формула 40
+
+*/
+
+extern "C" JNIEXPORT jfloat JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_R_am_v_och(JNIEnv *env, jobject thiz,
+                                                   jfloat P_am_v_och,
+                                                   jfloat V_am_v_och) {
+    return P_am_v_och * V_am_v_och;
+}
+
+/*
+
+  Сторінка 16. Пункт 3.3. Формула 43
+
+*/
+
+extern "C" JNIEXPORT jint JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_S_zag(JNIEnv *env, jobject thiz,
+                                              jint S_h,
+                                              jint S_hib,
+                                              jint S_osl) {
+    return S_h + S_hib + S_osl;
+}
+
+/*
+
+  Сторінка 16. Пункт 3.3. Формула 44
+
+*/
+
+extern "C" JNIEXPORT jint JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_S0(JNIEnv *env, jobject thiz,
+                                           jint a,
+                                           jint D_az) {
+    return a * D_az;
+}
+
+/*
+
+  Сторінка 16. Пункт 3.3. Формула 45
+
+*/
+
+extern "C" JNIEXPORT jint JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_N_zag(JNIEnv *env, jobject thiz,
+                                              jint S_zag,
+                                              jint S0) {
+    return S_zag / S0;
+}
+
+/*
+
+  Сторінка 16. Пункт 3.3.1. Формула 46
+
+*/
+
+extern "C" JNIEXPORT jfloat JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_K_j_pidr1(JNIEnv *env, jobject thiz,
+                                                  jintArray N_i_zag,
+                                                  jintArray N_i_norm,
+                                                  jint n) {
+    jint *N_i_zag_ptr = env->GetIntArrayElements(N_i_zag, 0);
+    jint *N_i_norm_ptr = env->GetIntArrayElements(N_i_norm, 0);
+
+    float sum = 0.0;
+    for (int i = 0; i < n; i++) {
+        sum += N_i_zag_ptr[i] / (float) N_i_norm_ptr[i];
+    }
+
+    env->ReleaseIntArrayElements(N_i_zag, N_i_zag_ptr, 0);
+    env->ReleaseIntArrayElements(N_i_norm, N_i_norm_ptr, 0);
+
+    return sum;
+}
+
+/*
+
+  Сторінка 17. Пункт 3.3.12 Формула 47
+
+*/
+
+extern "C" JNIEXPORT jfloat JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_K_j_pidr2(JNIEnv *env, jobject thiz,
+                                                  jintArray N_i_zag,
+                                                  jintArray c_i,
+                                                  jint n) {
+    jint *N_i_zag_ptr = env->GetIntArrayElements(N_i_zag, 0);
+    jint *c_i_ptr = env->GetIntArrayElements(c_i, 0);
+
+    float sum = 0.0;
+    for (int i = 0; i < n; i++) {
+        sum += N_i_zag_ptr[i] * c_i_ptr[i];
+    }
+
+    env->ReleaseIntArrayElements(N_i_zag, N_i_zag_ptr, 0);
+    env->ReleaseIntArrayElements(c_i, c_i_ptr, 0);
+
+    return sum;
+}
+
+/*
+
+  Сторінка 17. Пункт 3.4 Формула 48
+
+*/
+
+extern "C" JNIEXPORT jfloat JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_E_am(JNIEnv *env, jobject thiz,
+                                             jfloat R_crit_v_och,
+                                             jfloat R_v_och) {
+    return 1 - (R_crit_v_och / R_v_och);
+}
+
+/*
+
+  Сторінка 17. Пункт 3.5 Формула 49
+
+*/
+
+extern "C" JNIEXPORT jfloat JNICALL
+Java_ua_nure_cbrnprotector_MainActivity_V_v_op_am(JNIEnv *env, jobject thiz,
+                                                  jfloat N_ur,
+                                                  jfloat N) {
+    return N_ur / N;
 }
