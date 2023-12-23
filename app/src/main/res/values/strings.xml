@@ -19,6 +19,7 @@
     <string name="navigation_Cn">Cn</string>
     <string name="navigation_Ehbrya">Eхбря</string>
     <string name="navigation_V0Mod">V0 мод</string>
+    <string name="navigation_RV">RV</string>
 
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>
@@ -122,4 +123,8 @@
     <string name="fragment_V0Mod_title">Показник максимально допустимої частки можливого виявлення об’єктів противником для ураження</string>
     <string name="fragment_V0Mod_N0iv">Кількість i-х об’єктів , які можливо будуть виявлені противником. Через кому.</string>
     <string name="fragment_V0Mod_Nob">Загальна кількість об’єктів</string>
+
+    <string name="fragment_RV_title">Показник ймовірного ризику досягнення мети бойових дій щодо виявлення об’єктів противником для ураження</string>
+    <string name="fragment_RV_PV">Показник імовірності виявлення об’єктів</string>
+    <string name="fragment_RV_VV">Показник частки можливого виявлення противником об’єктів для ураження</string>
 </resources>
