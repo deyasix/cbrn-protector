@@ -397,18 +397,18 @@ Java_ua_nure_cbrnprotector_ui_Kn_KnViewModel_Kn(JNIEnv *env, jobject thiz, jintA
 
 */
 
-extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_C_n(JNIEnv *env, jobject thiz, jfloatArray N_i,
-                                            jfloatArray c_i) {
-    jfloat *N_i_ptr = env->GetFloatArrayElements(N_i, 0);
-    jfloat *c_i_ptr = env->GetFloatArrayElements(c_i, 0);
-    jfloat C = 0.0;
+extern "C" JNIEXPORT jint JNICALL
+Java_ua_nure_cbrnprotector_ui_Cn_CnViewModel_Cn(JNIEnv *env, jobject thiz, jintArray N_i,
+                                            jintArray c_i) {
+    jint *N_i_ptr = env->GetIntArrayElements(N_i, 0);
+    jint *c_i_ptr = env->GetIntArrayElements(c_i, 0);
+    jint C = 0;
     int size = env->GetArrayLength(N_i);
     for (int i = 0; i < size; i++) {
         C += N_i_ptr[i] * c_i_ptr[i];
     }
-    env->ReleaseFloatArrayElements(N_i, N_i_ptr, 0);
-    env->ReleaseFloatArrayElements(c_i, c_i_ptr, 0);
+    env->ReleaseIntArrayElements(N_i, N_i_ptr, 0);
+    env->ReleaseIntArrayElements(c_i, c_i_ptr, 0);
     return C;
 }
 
