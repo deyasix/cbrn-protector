@@ -559,7 +559,7 @@ Java_ua_nure_cbrnprotector_ui_RVcrit_RvCritViewModel_RvCritical(JNIEnv *env, job
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_E_neo_am(JNIEnv *env, jobject thiz,
+Java_ua_nure_cbrnprotector_ui_E_1neo_1am_ENeoAmViewModel_ENeoAm(JNIEnv *env, jobject thiz,
                                                  jfloat R0) {
     return 1 - R0;
 }

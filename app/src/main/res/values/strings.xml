@@ -29,6 +29,7 @@
     <string name="navigation_E0am">Eам нульове</string>
     <string name="navigation_Pvam">Pв АМ</string>
     <string name="navigation_RV_crit">R_v_critical</string>
+    <string name="navigation_E_neo_am">E_neo_am</string>
 
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>
@@ -169,6 +170,9 @@
 
     <string name="fragment_E0am_title">Обчислення ефективності посилення захисту військ із застосуванням аерозолів військовими частинами без підрозділів РХБ захисту</string>
     <string name="fragment_E0am_RvCrit">Показник критичного ризику досягнення мети бойових дій щодо виявлення противником об’єктів для ураження</string>
+
+    <string name="fragment_ENeoAm_title">Обчислення необхідної ефективності посилення захисту військ із застосуванням аерозолів</string>
+    <string name="fragment_ENeoAm_R0">Показник допустимого ризику досягнення мети бойових дій щодо виявлення об’єктів противником для ураження</string>
 
     <string name="fragment_Pvam_title">Зменшення ймовірності виявлення об’єктів противником</string>
     <string name="fragment_Pvam_Djiv">Cума кількості j-х загроз виявлення і-го об’єкту за даними розвідки. Через кому.</string>
