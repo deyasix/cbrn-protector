@@ -26,6 +26,7 @@
     <string name="navigation_RV">RV</string>
     <string name="navigation_R0_mod">R0 мод</string>
     <string name="navigation_Kiob">Kіоб</string>
+    <string name="navigation_E0am">Eам нульове</string>
 
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>
@@ -141,7 +142,7 @@
     <string name="fragment_V0Mod_N0iv">Кількість i-х об’єктів , які можливо будуть виявлені противником. Через кому.</string>
     <string name="fragment_V0Mod_Nob">Загальна кількість об’єктів</string>
 
-    <string name="fragment_RV_title">Показник ймовірного ризику досягнення мети бойових дій щодо виявлення об’єктів противником для ураження</string>
+    <string name="Rv">Показник ймовірного ризику досягнення мети бойових дій щодо виявлення об’єктів противником для ураження</string>
     <string name="fragment_RV_PV">Показник імовірності виявлення об’єктів</string>
     <string name="fragment_RV_VV">Показник частки можливого виявлення противником об’єктів для ураження</string>
 
@@ -157,4 +158,7 @@
     <string name="fragment_Kiob_title">Контраст яскравості об’єкту</string>
     <string name="fragment_Kiob_Lif">Яскравість фона об’єкту</string>
     <string name="fragment_Kiob_Liob">Яскравість об’єкту</string>
+
+    <string name="fragment_E0am_title">Обчислення ефективності посилення захисту військ із застосуванням аерозолів військовими частинами без підрозділів РХБ захисту</string>
+    <string name="fragment_E0am_RvCrit">Показник критичного ризику досягнення мети бойових дій щодо виявлення противником об’єктів для ураження</string>
 </resources>
