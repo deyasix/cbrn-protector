@@ -20,11 +20,14 @@
     <string name="navigation_Ehbrya">Eхбря</string>
     <string name="navigation_V0Mod">V0 мод</string>
     <string name="navigation_Rv">Rв</string>
-    <string name="navigation_Vhbrya_rhz_op">V ХБРЯ_рхз_оп</string>
+    <string name="navigation_Vhbrya_rhz_op">V ХБРЯ рхз оп</string>
     <string name="navigation_Pv">Pв</string>
     <string name="navigation_Vv">Vв</string>
     <string name="navigation_RV">RV</string>
     <string name="navigation_R0_mod">R0 мод</string>
+    <string name="navigation_Kiob">Kіоб</string>
+    <string name="navigation_E0am">Eам нульове</string>
+    <string name="navigation_Pvam">Pв АМ</string>
     <string name="navigation_RV_crit">R_v_critical</string>
 
     <string name="navigation_header_title">Menu</string>
@@ -68,6 +71,7 @@
     <string name="Nur_Nos_error">Загальна кількість особового складу повинна бути більша за кількість ураженого особового складу</string>
     <string name="Pv_error">Довжини масивів повинні бути однакового розміру. Кожна і-та сума кількості j-х загроз повинна бути не менша за кожну загальну кількість визначених загроз.</string>
     <string name="Niv_Nob_error">Сума кількості об\'єктів не може бути більша за загальну кількість об\'єктів.</string>
+    <string name="Pvam_error">Довжини масивів повинні бути однакового розміру. Кожна сума кількості j-х загроз виявлення і-го об’єкту за даними розвідки не може бути більша за загальну кількість визначених загроз.</string>
     <string name="Rv_R0_error">Імовірність виявлення об\'єктів противником має бутит більша за показник допустимого ризику</string>
 
     <string name="fragment_r0_v0">Показник імовірності РХ зараження особового складу підрозділів</string>
@@ -142,7 +146,7 @@
     <string name="fragment_V0Mod_N0iv">Кількість i-х об’єктів , які можливо будуть виявлені противником. Через кому.</string>
     <string name="fragment_V0Mod_Nob">Загальна кількість об’єктів</string>
 
-    <string name="fragment_RV_title">Показник ймовірного ризику досягнення мети бойових дій щодо виявлення об’єктів противником для ураження</string>
+    <string name="Rv">Показник ймовірного ризику досягнення мети бойових дій щодо виявлення об’єктів противником для ураження</string>
     <string name="fragment_RV_PV">Показник імовірності виявлення об’єктів</string>
     <string name="fragment_RV_VV">Показник частки можливого виявлення противником об’єктів для ураження</string>
 
@@ -158,4 +162,17 @@
     <string name="fragment_Vv_title">Обчислення значення показника ймовірності виявлення об’єктів противником</string>
     <string name="fragment_Vv_Niv">Кількість і-х об’єктів по яким реалізовані загрози виявлення. Через кому.</string>
     <string name="fragment_Vv_Nob">Загальна кількість об’єктів</string>
+
+    <string name="fragment_Kiob_title">Контраст яскравості об’єкту</string>
+    <string name="fragment_Kiob_Lif">Яскравість фона об’єкту</string>
+    <string name="fragment_Kiob_Liob">Яскравість об’єкту</string>
+
+    <string name="fragment_E0am_title">Обчислення ефективності посилення захисту військ із застосуванням аерозолів військовими частинами без підрозділів РХБ захисту</string>
+    <string name="fragment_E0am_RvCrit">Показник критичного ризику досягнення мети бойових дій щодо виявлення противником об’єктів для ураження</string>
+
+    <string name="fragment_Pvam_title">Зменшення ймовірності виявлення об’єктів противником</string>
+    <string name="fragment_Pvam_Djiv">Cума кількості j-х загроз виявлення і-го об’єкту за даними розвідки. Через кому.</string>
+    <string name="fragment_Pvam_N">Кількість хибних районів АМ</string>
+    <string name="fragment_Pvam_Nzv">Загальна кількість визначених загроз, реалізація яких 100 % призведе до виявлення і-гооб’єкта. Через кому.</string>
+    <string name="fragment_Pvam_Nhv">Кількість макетів об’єктів в хибному район АМ</string>
 </resources>

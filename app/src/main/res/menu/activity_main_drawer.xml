@@ -77,6 +77,15 @@
             android:id="@+id/nav_R0_mod"
             android:title="@string/navigation_R0_mod" />
         <item
+            android:id="@+id/nav_Kiob"
+            android:title="@string/navigation_Kiob" />
+        <item
+            android:id="@+id/nav_E0am"
+            android:title="@string/navigation_E0am" />
+        <item
+            android:id="@+id/nav_Pvam"
+            android:title="@string/navigation_Pvam" />
+        <item
             android:id="@+id/nav_RV_crit"
             android:title="@string/navigation_RV_crit" />
     </group>

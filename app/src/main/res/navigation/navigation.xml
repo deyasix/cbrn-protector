@@ -129,6 +129,21 @@
         android:label="@string/navigation_R0_mod"
         tools:layout="@layout/fragment_2_popups" />
     <fragment
+        android:id="@+id/nav_Kiob"
+        android:name="ua.nure.cbrnprotector.ui.Kiob.KiobFragment"
+        android:label="@string/navigation_Kiob"
+        tools:layout="@layout/fragment_2_edit_texts" />
+    <fragment
+        android:id="@+id/nav_E0am"
+        android:name="ua.nure.cbrnprotector.ui.E0am.E0amFragment"
+        android:label="@string/navigation_E0am"
+        tools:layout="@layout/fragment_2_popups" />
+    <fragment
+        android:id="@+id/nav_Pvam"
+        android:name="ua.nure.cbrnprotector.ui.Pvam.PvamFragment"
+        android:label="@string/navigation_Pvam"
+        tools:layout="@layout/fragment_4_edit_texts" />
+    <fragment
         android:id="@+id/nav_RV_crit"
         android:name="ua.nure.cbrnprotector.ui.RVcrit.RvCritFragment"
         android:label="@string/navigation_RV_crit"
