@@ -601,7 +601,7 @@ jfloat P_iv_j(jint D_j_iv, jint nzv) {
 }
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_P_v_AM(JNIEnv *env, jobject thiz, jintArray D_j_iv,
+Java_ua_nure_cbrnprotector_ui_Pvam_PvamViewModel_PvAM(JNIEnv *env, jobject thiz, jintArray D_j_iv,
                                                jintArray nzv, jint N_v, jint n, jint N_h_v) {
     jint *D_j_iv_ptr = env->GetIntArrayElements(D_j_iv, 0);
     jint *nzv_ptr = env->GetIntArrayElements(nzv, 0);
