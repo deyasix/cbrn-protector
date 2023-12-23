@@ -446,7 +446,7 @@ Java_ua_nure_cbrnprotector_ui_Vhbrya_1rhz_1op_VhbryaRhzOpViewModel_VhbryaRhzOp(J
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_R0_modified(JNIEnv *env, jobject thiz,
+Java_ua_nure_cbrnprotector_ui_R0mod_R0ModViewModel_R0Mod(JNIEnv *env, jobject thiz,
                                                     jfloat P0,
                                                     jfloat V0) {
     return P0 * V0;

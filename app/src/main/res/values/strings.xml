@@ -23,6 +23,8 @@
     <string name="navigation_Vhbrya_rhz_op">V ХБРЯ_рхз_оп</string>
     <string name="navigation_Pv">Pв</string>
     <string name="navigation_Vv">Vв</string>
+    <string name="navigation_RV">RV</string>
+    <string name="navigation_R0_mod">R0 мод</string>
 
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>
@@ -68,6 +70,10 @@
 
     <string name="fragment_r0_v0">Показник імовірності РХ зараження особового складу підрозділів</string>
     <string name="fragment_r0_p0">Показник максимально допустимої уразливості особового складу підрозділів в умовах РХ зараження</string>
+
+    <string name="fragment_r0_mod_title">Показник допустимого ризику досягнення мети бойових дій щодо виявлення об’єктів противником для ураження</string>
+    <string name="fragment_r0_mod_p0">Показник імовірності виявлення об’єктів противником.</string>
+    <string name="fragment_r0_mod_v0">Показник максимально допустимої частки можливого виявлення об’єктів противником для ураження.</string>
 
     <string name="fragment_v0_title">Показник максимально допустимої уразливості особового складу підрозділів в умовах РХ зараження</string>
     <string name="fragment_v0_Nivt">Кількість особового складу військової частини, яка ймовірно втратить життя та здоров’я в умовах РХ зараження</string>
