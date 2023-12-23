@@ -88,5 +88,9 @@
         android:name="ua.nure.cbrnprotector.ui.Vrhz.VrhzFragment"
         android:label="Vrhz"
         tools:layout="@layout/fragment_3_edit_texts" />
-
+    <fragment
+        android:id="@+id/nav_Cn"
+        android:name="ua.nure.cbrnprotector.ui.Cn.CnFragment"
+        android:label="Cn"
+        tools:layout="@layout/fragment_2_edit_texts" />
 </navigation>

@@ -16,6 +16,7 @@
     <string name="navigation_Prhz">Pрхз</string>
     <string name="navigation_Kn">Kn</string>
     <string name="navigation_Vrhz">Vрхз</string>
+    <string name="navigation_Cn">Cn</string>
 
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>
@@ -53,6 +54,8 @@
     <string name="Djirhz_Nirhz_error">Кожна кількість j-x загроз повинна бути вища за загальну кількість загроз на тій же позиції</string>
     <string name="Kn_error">Довжини масивів повинні бути однакового розміру. Кожна і-та сума показників обсягу заходу повинна бути не менша за кожну можливість і-го типу засобу РХБ захисту. Кожна i-та кількість озброєння і засобів РХБ захисту повинна бути не більшою за результат ділення і-тої суми показників обсягу заходу та можливість і-го типу засобу.</string>
     <string name="N200_N300_error">Загальна кількість особового складу повинна бути більша за суму можливих втрат</string>
+    <string name="Cn_error">Довжини масивів повинні бути однакового розміру.</string>
+
 
     <string name="fragment_r0_v0">Показник імовірності РХ зараження особового складу підрозділів</string>
     <string name="fragment_r0_p0">Показник максимально допустимої уразливості особового складу підрозділів в умовах РХ зараження</string>
@@ -105,4 +108,8 @@
     <string name="fragment_vhrz_N200">Можливі втрати життя особового складу і-ї військової частини в умовах РХ зараження. Через кому.</string>
     <string name="fragment_vhrz_N300">Можливі втрати здоров’я особового складу і-ї військової частини в умовах РХ зараження. Через кому.</string>
     <string name="fragment_vhrz_Nos">Загальна кількість особового складу</string>
+
+    <string name="fragment_Cn_title">Вартість варіанту дій за складом сил і засобів Б(Р)ТГр РХБ захисту</string>
+    <string name="fragment_Cn_Ci">Вартість одного засобу РХБ захисту і-го типу. Через кому.</string>
+    <string name="fragment_Cn_Ni">Загальна кількість засобів РХБ захисту і-го типу. Через кому</string>
 </resources>
