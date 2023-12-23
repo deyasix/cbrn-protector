@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">CBRN Protector</string>
     <string name="navigation_home">Home</string>
-    <string name="navigation_rif">RIF</string>
-    <string name="navigation_hostiles_indicator">Hostiles Indicator</string>
+    <string name="navigation_rif">Rну</string>
+    <string name="navigation_hostiles_indicator">R0</string>
     <string name="navigation_v0">V0</string>
     <string name="navigation_En">En</string>
     <string name="navigation_Rrhz">Rрхз</string>
@@ -23,13 +23,13 @@
     <string name="navigation_Vhbrya_rhz_op">V ХБРЯ рхз оп</string>
     <string name="navigation_Pv">Pв</string>
     <string name="navigation_Vv">Vв</string>
-    <string name="navigation_RV">RV</string>
+    <string name="navigation_RV">Rв</string>
     <string name="navigation_R0_mod">R0 мод</string>
     <string name="navigation_Kiob">Kіоб</string>
-    <string name="navigation_E0am">Eам нульове</string>
+    <string name="navigation_E0am">E АМ нульове</string>
     <string name="navigation_Pvam">Pв АМ</string>
-    <string name="navigation_RV_crit">R_v_critical</string>
-    <string name="navigation_E_neo_am">E_neo_am</string>
+    <string name="navigation_RV_crit">Rв критичне</string>
+    <string name="navigation_E_neo_am">E АМ необхідне</string>
 
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>

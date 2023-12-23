@@ -29,7 +29,7 @@ class VrhzFragment :
 
     private fun setListeners() {
         with(binding) {
-            etFirst.doAfterTextChanged { text->
+            etFirst.doAfterTextChanged { text ->
                 viewModel.setN200(text.toString())
             }
             etSecond.doAfterTextChanged { text ->
@@ -58,11 +58,9 @@ class VrhzFragment :
     private fun init() {
         with(binding) {
             tvTitle.text = getString(R.string.fragment_vhrz_title)
-            etFirst.inputType = InputType.TYPE_CLASS_TEXT
             tvFirst.text = getString(R.string.fragment_vhrz_N200)
-            etSecond.inputType = InputType.TYPE_CLASS_TEXT
             tvSecond.text = getString(R.string.fragment_vhrz_N300)
-            etThird.inputType = InputType.TYPE_CLASS_TEXT
+            etThird.inputType = InputType.TYPE_CLASS_NUMBER
             tvThird.text = getString(R.string.fragment_vhrz_Nos)
         }
     }

@@ -3,13 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
-
-    <fragment
-        android:id="@+id/nav_home"
-        android:name="ua.nure.cbrnprotector.ui.home.HomeFragment"
-        android:label="CBRN Protector"
-        tools:layout="@layout/fragment_home" />
+    app:startDestination="@+id/nav_rif">
 
     <fragment
         android:id="@+id/nav_rif"
@@ -36,12 +30,12 @@
     <fragment
         android:id="@+id/nav_Rrhz"
         android:name="ua.nure.cbrnprotector.ui.Rrhz.RrhzFragment"
-        android:label="Rrhz"
+        android:label="@string/navigation_Rrhz"
         tools:layout="@layout/fragment_2_popups" />
     <fragment
         android:id="@+id/nav_RrhzCrit"
         android:name="ua.nure.cbrnprotector.ui.RrhzCrit.RrhzCritFragment"
-        android:label="RrhzCrit"
+        android:label="@string/navigation_RrhzCrit"
         tools:layout="@layout/fragment_1_popup" />
     <fragment
         android:id="@+id/nav_EhbryaNec"
