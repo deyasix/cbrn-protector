@@ -546,7 +546,7 @@ Java_ua_nure_cbrnprotector_ui_Kiob_KiobViewModel_Kiob(JNIEnv *env, jobject thiz,
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_Rv_critical(JNIEnv *env, jobject thiz,
+Java_ua_nure_cbrnprotector_ui_RVcrit_RvCritViewModel_RvCritical(JNIEnv *env, jobject thiz,
                                                     jfloat Rv,
                                                     jfloat R0) {
     return Rv - R0;

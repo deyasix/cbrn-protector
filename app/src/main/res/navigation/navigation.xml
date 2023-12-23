@@ -143,4 +143,9 @@
         android:name="ua.nure.cbrnprotector.ui.Pvam.PvamFragment"
         android:label="@string/navigation_Pvam"
         tools:layout="@layout/fragment_4_edit_texts" />
+    <fragment
+        android:id="@+id/nav_RV_crit"
+        android:name="ua.nure.cbrnprotector.ui.RVcrit.RvCritFragment"
+        android:label="@string/navigation_RV_crit"
+        tools:layout="@layout/fragment_2_popups" />
 </navigation>

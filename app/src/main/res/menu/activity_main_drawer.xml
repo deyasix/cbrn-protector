@@ -85,5 +85,8 @@
         <item
             android:id="@+id/nav_Pvam"
             android:title="@string/navigation_Pvam" />
+        <item
+            android:id="@+id/nav_RV_crit"
+            android:title="@string/navigation_RV_crit" />
     </group>
 </menu>
