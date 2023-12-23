@@ -468,7 +468,7 @@ Java_ua_nure_cbrnprotector_MainActivity_V0_modified(JNIEnv *env, jobject thiz, j
         sum += N_iv_0_ptr[i];
     }
     env->ReleaseIntArrayElements(N_iv_0, N_iv_0_ptr, 0);
-    return sum / N_ob;
+    return static_cast<float>(sum) / N_ob;
 }
 
 /*
