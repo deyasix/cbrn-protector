@@ -1,4 +1,4 @@
-package ua.nure.cbrnprotector.ui.RV
+package ua.nure.cbrnprotector.ui.Rv
 
 import android.os.Bundle
 import android.view.View
@@ -8,10 +8,10 @@ import ua.nure.cbrnprotector.base.BaseFragment
 import ua.nure.cbrnprotector.databinding.Fragment2PopupsBinding
 import ua.nure.cbrnprotector.domain.Risk
 
-class RVFragment : BaseFragment<Fragment2PopupsBinding, RVViewModel>(
+class RvFragment : BaseFragment<Fragment2PopupsBinding, RvViewModel>(
     Fragment2PopupsBinding::inflate
 ) {
-    override val viewModel: RVViewModel by viewModels()
+    override val viewModel: RvViewModel by viewModels()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -23,15 +23,15 @@ class RVFragment : BaseFragment<Fragment2PopupsBinding, RVViewModel>(
     private fun setListeners() {
         with(binding) {
             ppFirst.onItemSelected = {
-                viewModel.setPV(it.value)
+                viewModel.setPv(it.value)
             }
             ppSecond.onItemSelected = {
-                viewModel.setVV(it.value)
+                viewModel.setVv(it.value)
             }
-            viewModel.PVState.observe(viewLifecycleOwner) {
+            viewModel.PvState.observe(viewLifecycleOwner) {
                 if (it == null) ppFirst.clearData()
             }
-            viewModel.VVState.observe(viewLifecycleOwner) {
+            viewModel.VvState.observe(viewLifecycleOwner) {
                 if (it == null) ppSecond.clearData()
             }
 

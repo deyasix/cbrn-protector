@@ -19,8 +19,9 @@
     <string name="navigation_Cn">Cn</string>
     <string name="navigation_Ehbrya">Eхбря</string>
     <string name="navigation_V0Mod">V0 мод</string>
-    <string name="navigation_RV">RV</string>
+    <string name="navigation_Rv">Rв</string>
     <string name="navigation_Vhbrya_rhz_op">V ХБРЯ_рхз_оп</string>
+    <string name="navigation_Pv">Pв</string>
 
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>
@@ -61,7 +62,7 @@
     <string name="Cn_error">Довжини масивів повинні бути однакового розміру.</string>
     <string name="N0iv_Nob_error">Сума кількості об\'єктів, які можливо будуть виявлені противником, не може бути більшою за загальну кількість об\'єктів</string>
     <string name="Nur_Nos_error">Загальна кількість особового складу повинна бути більша за кількість ураженого особового складу</string>
-
+    <string name="Pv_error">Довжини масивів повинні бути однакового розміру. Кожна і-та сума кількості j-х загроз повинна бути не менша за кожну загальну кількість визначених загроз.</string>
 
     <string name="fragment_r0_v0">Показник імовірності РХ зараження особового складу підрозділів</string>
     <string name="fragment_r0_p0">Показник максимально допустимої уразливості особового складу підрозділів в умовах РХ зараження</string>
@@ -134,4 +135,9 @@
     <string name="fragment_RV_title">Показник ймовірного ризику досягнення мети бойових дій щодо виявлення об’єктів противником для ураження</string>
     <string name="fragment_RV_PV">Показник імовірності виявлення об’єктів</string>
     <string name="fragment_RV_VV">Показник частки можливого виявлення противником об’єктів для ураження</string>
+
+    <string name="fragment_Pv_title">Обчислення значення показника ймовірності виявлення об’єктів противником</string>
+    <string name="fragment_Pv_Djiv">Сума кількості кількість j-х загроз виявлення і-го об’єкту за даними розвідки. Через кому</string>
+    <string name="fragment_Pv_Niv">Загальна кількість визначених загроз, реалізація яких 100 % призведе до виявлення і-го об’єкта. Через кому.</string>
+    <string name="fragment_Pv_Nv">Кількість об’єктів по яким реалізовані загрози виявлення</string>
 </resources>
