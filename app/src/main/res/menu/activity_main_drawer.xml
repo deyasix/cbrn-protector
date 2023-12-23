@@ -9,10 +9,10 @@
             android:title="@string/navigation_home" />
         <item
             android:id="@+id/nav_rif"
-            android:title="@string/navigation_rif" />
+            android:title="@string/navigation_Rnu" />
         <item
             android:id="@+id/nav_hostiles_indicator"
-            android:title="@string/navigation_hostiles_indicator" />
+            android:title="@string/navigation_R0" />
         <item
             android:id="@+id/nav_v0"
             android:title="@string/navigation_v0" />
@@ -62,7 +62,10 @@
             android:id="@+id/nav_V0Mod"
             android:title="@string/navigation_V0Mod" />
         <item
-            android:id="@+id/nav_RV"
-            android:title="@string/navigation_RV" />
+            android:id="@+id/nav_Rv"
+            android:title="@string/navigation_Rv" />
+        <item
+            android:id="@+id/nav_Pv"
+            android:title="@string/navigation_Pv" />
     </group>
 </menu>

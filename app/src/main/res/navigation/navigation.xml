@@ -104,8 +104,13 @@
         android:label="V0 мод"
         tools:layout="@layout/fragment_2_edit_texts" />
     <fragment
-        android:id="@+id/nav_RV"
-        android:name="ua.nure.cbrnprotector.ui.RV.RVFragment"
-        android:label="RV"
+        android:id="@+id/nav_Rv"
+        android:name="ua.nure.cbrnprotector.ui.Rv.RvFragment"
+        android:label="Rв"
         tools:layout="@layout/fragment_2_popups" />
+    <fragment
+        android:id="@+id/nav_Pv"
+        android:name="ua.nure.cbrnprotector.ui.Pv.PvFragment"
+        android:label="Pв"
+        tools:layout="@layout/fragment_3_edit_texts" />
 </navigation>
