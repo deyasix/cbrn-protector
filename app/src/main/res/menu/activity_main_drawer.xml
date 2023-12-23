@@ -79,5 +79,8 @@
         <item
             android:id="@+id/nav_Kiob"
             android:title="@string/navigation_Kiob" />
+        <item
+            android:id="@+id/nav_E0am"
+            android:title="@string/navigation_E0am" />
     </group>
 </menu>

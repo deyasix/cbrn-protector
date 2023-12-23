@@ -571,9 +571,9 @@ Java_ua_nure_cbrnprotector_MainActivity_E_neo_am(JNIEnv *env, jobject thiz,
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_E_0_am(JNIEnv *env, jobject thiz,
+Java_ua_nure_cbrnprotector_ui_E0am_E0amViewModel_E0am(JNIEnv *env, jobject thiz,
                                                jfloat Rv_critical,
-                                               float Rv) {
+                                               jfloat Rv) {
     return 1 - (Rv_critical / Rv);
 }
 

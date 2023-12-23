@@ -133,4 +133,9 @@
         android:name="ua.nure.cbrnprotector.ui.Kiob.KiobFragment"
         android:label="@string/navigation_Kiob"
         tools:layout="@layout/fragment_2_edit_texts" />
+    <fragment
+        android:id="@+id/nav_E0am"
+        android:name="ua.nure.cbrnprotector.ui.E0am.E0amFragment"
+        android:label="@string/navigation_E0am"
+        tools:layout="@layout/fragment_2_popups" />
 </navigation>
