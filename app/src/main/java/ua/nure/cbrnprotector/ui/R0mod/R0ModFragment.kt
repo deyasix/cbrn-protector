@@ -41,11 +41,12 @@ class R0ModFragment :
     private fun init() {
         with(binding) {
             tvTitle.text = getString(R.string.fragment_r0_mod_title)
+            ppFirst.hint = getString(R.string.choose_probability)
             ppFirst.setConditionsList(Risk.entries)
             ppSecond.hint = getString(R.string.choose_probability)
             ppSecond.setConditionsList(Risk.entries)
-            tvFirst.text = getString(R.string.fragment_r0_v0)
-            tvSecond.text = getString(R.string.fragment_r0_p0)
+            tvFirst.text = getString(R.string.fragment_r0_mod_p0)
+            tvSecond.text = getString(R.string.fragment_r0_mod_v0)
         }
     }
 }
