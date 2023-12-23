@@ -17,6 +17,7 @@
     <string name="navigation_Kn">Kn</string>
     <string name="navigation_Vrhz">Vрхз</string>
     <string name="navigation_Cn">Cn</string>
+    <string name="navigation_Vhbrya_rhz_op">V ХБРЯ_рхз_оп</string>
 
     <string name="navigation_header_title">Menu</string>
     <string name="calculate">Розрахувати</string>
@@ -55,6 +56,7 @@
     <string name="Kn_error">Довжини масивів повинні бути однакового розміру. Кожна і-та сума показників обсягу заходу повинна бути не менша за кожну можливість і-го типу засобу РХБ захисту. Кожна i-та кількість озброєння і засобів РХБ захисту повинна бути не більшою за результат ділення і-тої суми показників обсягу заходу та можливість і-го типу засобу.</string>
     <string name="N200_N300_error">Загальна кількість особового складу повинна бути більша за суму можливих втрат</string>
     <string name="Cn_error">Довжини масивів повинні бути однакового розміру.</string>
+    <string name="Nur_Nos_error">Загальна кількість особового складу повинна бути більша за кількість ураженого особового складу</string>
 
 
     <string name="fragment_r0_v0">Показник імовірності РХ зараження особового складу підрозділів</string>
@@ -63,6 +65,10 @@
     <string name="fragment_v0_title">Показник максимально допустимої уразливості особового складу підрозділів в умовах РХ зараження</string>
     <string name="fragment_v0_Nivt">Кількість особового складу військової частини, яка ймовірно втратить життя та здоров’я в умовах РХ зараження</string>
     <string name="fragment_v0_Nos">Загальна кількість особового складу</string>
+
+    <string name="fragment_vhbrya_rhz_op_title">Уразливість особового складу в умовах РХ зараження по закінченню оборонної бойових дій</string>
+    <string name="fragment_vhbrya_rhz_op_Nur">Кількість особового складу , які втратили життя і здоров’я в умовах РХ зараження.</string>
+    <string name="fragment_vhbrya_rhz_op_Nos">Загальна кількість особового складу.</string>
 
     <string name="fragment_En_title">Показник ефективності виконання кожного завдання системи ХБРЯ захисту</string>
     <string name="fragment_En_r0">Допустимий ризик досягнення мети бойових дій щодо n-го завдання системи ХБРЯ захисту</string>

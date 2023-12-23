@@ -55,5 +55,8 @@
         <item
             android:id="@+id/nav_Cn"
             android:title="@string/navigation_Cn" />
+        <item
+            android:id="@+id/nav_Vhbrya_Rhz_Op"
+            android:title="@string/navigation_Vhbrya_rhz_op" />
     </group>
 </menu>

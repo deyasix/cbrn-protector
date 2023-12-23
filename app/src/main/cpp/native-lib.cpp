@@ -433,10 +433,10 @@ Java_ua_nure_cbrnprotector_MainActivity_Ehbrya(JNIEnv *env, jobject thiz,
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_V_hbrya_rhz_on(JNIEnv *env, jobject thiz,
-                                                       jfloat N_yr,
-                                                       jfloat N_oc) {
-    return N_yr / N_oc;
+Java_ua_nure_cbrnprotector_ui_Vhbrya_1rhz_1op_VhbryaRhzOpViewModel_VhbryaRhzOp(JNIEnv *env, jobject thiz,
+                                                                               jint N_yr,
+                                                                               jint N_oc) {
+    return static_cast<float>(N_yr) / N_oc;
 }
 
 /*
