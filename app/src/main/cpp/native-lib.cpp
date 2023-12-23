@@ -515,7 +515,7 @@ Java_ua_nure_cbrnprotector_ui_Pv_PvViewModel_Pv(JNIEnv *env, jobject thiz, jintA
 */
 
 extern "C" JNIEXPORT jfloat JNICALL
-Java_ua_nure_cbrnprotector_MainActivity_Vv(JNIEnv *env, jobject thiz, jintArray N_iv, jint N_ob) {
+Java_ua_nure_cbrnprotector_ui_Vv_VvViewModel_Vv(JNIEnv *env, jobject thiz, jintArray N_iv, jint N_ob) {
     jint *N_iv_ptr = env->GetIntArrayElements(N_iv, 0);
     jfloat sum = 0.0;
     int size = env->GetArrayLength(N_iv);
