@@ -180,5 +180,5 @@
     <string name="fragment_Pvam_N">Кількість хибних районів АМ</string>
     <string name="fragment_Pvam_Nzv">Загальна кількість визначених загроз, реалізація яких 100 % призведе до виявлення і-гооб’єкта. Через кому.</string>
     <string name="fragment_Pvam_Nhv">Кількість макетів об’єктів в хибному район АМ</string>
-    <string name="risks_level_title">Ступені ризику/ймовірності</string>
+    <string name="risks_level_title">Ступені ризику або ймовірності</string>
 </resources>
