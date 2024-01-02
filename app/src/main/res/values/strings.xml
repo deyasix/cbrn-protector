@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">CBRN Protector</string>
-    <string name="navigation_home">Home</string>
+    <string name="navigation_home">Головна</string>
     <string name="navigation_rif">Rну</string>
     <string name="navigation_hostiles_indicator">R0</string>
     <string name="navigation_v0">V0</string>
@@ -35,6 +35,7 @@
     <string name="calculate">Розрахувати</string>
     <string name="clear_data">Скинути дані</string>
     <string name="error_not_enough_data">Введіть усі необхідні дані</string>
+    <string name="risk_level_text">Від %1$s до %2$s</string>
 
     <string name="very_high_level">Надзвичайно високий</string>
     <string name="high_level">Високий</string>
@@ -86,7 +87,7 @@
     <string name="fragment_v0_Nivt">Кількість особового складу військової частини, яка ймовірно втратить життя та здоров’я в умовах РХ зараження</string>
     <string name="fragment_v0_Nos">Загальна кількість особового складу</string>
 
-    <string name="fragment_vhbrya_rhz_op_title">Уразливість особового складу в умовах РХ зараження по закінченню оборонної бойових дій</string>
+    <string name="fragment_vhbrya_rhz_op_title">Уразливість особового складу в умовах РХ зараження по закінченню оборонних бойових дій</string>
     <string name="fragment_vhbrya_rhz_op_Nur">Кількість особового складу , які втратили життя і здоров’я в умовах РХ зараження.</string>
     <string name="fragment_vhbrya_rhz_op_Nos">Загальна кількість особового складу.</string>
 
@@ -179,4 +180,5 @@
     <string name="fragment_Pvam_N">Кількість хибних районів АМ</string>
     <string name="fragment_Pvam_Nzv">Загальна кількість визначених загроз, реалізація яких 100 % призведе до виявлення і-гооб’єкта. Через кому.</string>
     <string name="fragment_Pvam_Nhv">Кількість макетів об’єктів в хибному район АМ</string>
+    <string name="risks_level_title">Ступені ризику/ймовірності</string>
 </resources>
